@@ -3,7 +3,7 @@
 A public list of PC games that do not run in [GameNative](https://gamenative.app), the Android app that runs Windows games. It is rebuilt every night from real usage data, and one GitHub issue is kept open per broken game until users can play it again.
 
 - **[WORKLIST.md](WORKLIST.md)**: the rendered list. Start here.
-- **[Issues labelled `does-not-work`](../../issues?q=label%3Adoes-not-work)**: one per broken game with enough ratings. These are the things to fix.
+- **[Issues labelled `does-not-work`](../../issues?q=label%3Adoes-not-work)**: one per broken game. These are the things to fix.
 - **[data/worklist.json](data/worklist.json)**: the raw data, free to reuse.
 
 ## How to read the verdicts
@@ -12,7 +12,7 @@ Every game that has enough data gets one verdict:
 
 | Verdict | Meaning |
 |---|---|
-| **Does not work** (`BROKEN`) | Most ratings are one star and most users never get a game window to draw a frame. Gets an issue once it has 50+ ratings. |
+| **Does not work** (`BROKEN`) | Most ratings are one star and most users never get a game window to draw a frame. Every game with this verdict gets an issue. |
 | **Probably does not work** (`LIKELY_BROKEN`) | Half or more of the ratings are one star and rendering looks bad, but the signal is weaker. Needs someone to confirm on a device before it becomes an issue. |
 | **Works, but the first launch usually fails** (`FIRST_RUN_FRICTION`) | Users complain, but most of them do get the game to render eventually. Usually a redistributable, launcher, login or setting that the first run trips over. |
 | `MIXED` | Some users play, some do not. Not shown in the list. |
@@ -20,7 +20,7 @@ Every game that has enough data gets one verdict:
 
 The tables are ordered by the number of one-star ratings, which is the count of players who hit the problem, so the top rows are where a fix helps the most people; the `#` column is just the row rank. The exact thresholds are in the header of WORKLIST.md; they come from the data file so they are always the ones used for the current render.
 
-A game is **recovered** when it is no longer `BROKEN` or `LIKELY_BROKEN` on the current app release. Its row shows `[x]`, it moves to the "Recently recovered" section for 30 days, and its issue closes after it stays out of the broken lists for 7 nightly syncs in a row. If it breaks again, the issue reopens.
+A game is **recovered** when it is no longer `BROKEN` or `LIKELY_BROKEN` on the current app release. Its row shows `[x]`, it moves to the "Recently recovered" section for 30 days, and its issue closes after it stays out of the broken lists for 7 nightly syncs in a row. If it breaks again, the issue reopens. Closing an issue by hand as "not planned" tells the sync to leave it closed for good; closing it as "completed" while the data still says broken gets it reopened the next night with a comment.
 
 ## Where the data comes from
 

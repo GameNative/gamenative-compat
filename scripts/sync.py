@@ -21,7 +21,6 @@ DEFAULT_URL = "https://api.gamenative.app/api/compat-worklist"
 LABEL = "does-not-work"
 LABEL_COLOR = "d73a4a"
 LABEL_DESCRIPTION = "Game does not run in GameNative (auto-managed from the compat worklist)"
-ISSUE_MIN_RATINGS = 50
 CLOSE_AFTER_SYNCS = 7
 RECENT_DAYS = 30
 MARKER_RE = re.compile(r"<!-- compat-worklist: (.+?) -->")
@@ -311,7 +310,7 @@ def issue_body(game, worklist, repo):
         "",
         f"Data as of `{worklist.get('generated_at')}`. See the [worklist]({worklist_link}) for how these numbers are produced.",
         "",
-        f"This issue is managed by the nightly sync. The metrics above refresh automatically; comments are left alone. It closes on its own once the game stays out of the broken lists for {CLOSE_AFTER_SYNCS} nights in a row and reopens if the game breaks again.",
+        f"This issue is managed by the nightly sync. The metrics above refresh automatically; comments are left alone. It closes on its own once the game stays out of the broken lists for {CLOSE_AFTER_SYNCS} nights in a row and reopens if the game breaks again. To stop that for a game we will not fix, close the issue as \"not planned\" and the sync leaves it alone.",
         "",
         marker_for(game),
     ]
@@ -456,7 +455,7 @@ def manage_issues(worklist, state, args):
         entry = state_games.get(key)
         issue = existing.get(key)
         number = entry.get("issue_number") if entry else None
-        qualifies = game["verdict"] == "BROKEN" and game["ratings"] >= ISSUE_MIN_RATINGS
+        qualifies = game["verdict"] == "BROKEN"
         title = issue_title(game)
         body = issue_body(game, worklist, repo)
 
@@ -485,6 +484,10 @@ def manage_issues(worklist, state, args):
         body_changed = current_body != body.rstrip() or issue.get("title") != title
 
         if game["verdict"] == "BROKEN":
+            if not is_open and issue.get("state_reason") == "not_planned":
+                log(f"issues: #{number} {title} was closed as not planned by a human; leaving it closed")
+                planned["unchanged"] += 1
+                continue
             if not is_open:
                 planned["reopen"] += 1
                 if dry:
