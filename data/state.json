@@ -3,14 +3,14 @@
     "STEAM:Project Zomboid": {
       "name": "Project Zomboid",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 1,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
       "last_seen": "2026-10-16",
-      "ratings": 732,
-      "users_rendered_pct": 6,
-      "one_star": 683
+      "ratings": 733,
+      "users_rendered_pct": 8,
+      "one_star": 684
     },
     "STEAM:The Witcher 3: Wild Hunt": {
       "name": "The Witcher 3: Wild Hunt",
@@ -20,7 +20,7 @@
       "recovered_since": null,
       "last_verdict": "LIKELY_BROKEN",
       "last_seen": "2026-10-16",
-      "ratings": 367,
+      "ratings": 366,
       "users_rendered_pct": null,
       "one_star": 229
     },
@@ -39,7 +39,7 @@
     "STEAM:Alan Wake": {
       "name": "Alan Wake",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 5,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -51,7 +51,7 @@
     "STEAM:The Elder Scrolls IV: Oblivion Game of the Year Edition (2009)": {
       "name": "The Elder Scrolls IV: Oblivion Game of the Year Edition (2009)",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 2,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -63,7 +63,7 @@
     "STEAM:METAL GEAR SOLID V: THE PHANTOM PAIN": {
       "name": "METAL GEAR SOLID V: THE PHANTOM PAIN",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 4,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -75,19 +75,19 @@
     "STEAM:Counter-Strike 2": {
       "name": "Counter-Strike 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 10,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
       "last_seen": "2026-10-16",
       "ratings": 307,
-      "users_rendered_pct": 41,
+      "users_rendered_pct": 40,
       "one_star": 216
     },
     "STEAM:Just Cause 2": {
       "name": "Just Cause 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 3,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -100,7 +100,7 @@
       "name": "OMORI",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "FIRST_RUN_FRICTION",
       "last_seen": "2026-10-16",
@@ -123,7 +123,7 @@
     "STEAM:The Witcher: Enhanced Edition": {
       "name": "The Witcher: Enhanced Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 21,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -138,7 +138,7 @@
       "issue_number": null,
       "non_broken_streak": 0,
       "recovered_since": null,
-      "last_verdict": "BROKEN",
+      "last_verdict": "LIKELY_BROKEN",
       "last_seen": "2026-10-16",
       "ratings": 262,
       "users_rendered_pct": 56,
@@ -147,7 +147,7 @@
     "STEAM:Call of Duty: Black Ops": {
       "name": "Call of Duty: Black Ops",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 6,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -171,7 +171,7 @@
     "STEAM:DRAGON BALL FighterZ": {
       "name": "DRAGON BALL FighterZ",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 9,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -183,7 +183,7 @@
     "STEAM:skate.": {
       "name": "skate.",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 7,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -196,18 +196,18 @@
       "name": "Burnout Paradise: The Ultimate Box",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 0,
-      "recovered_since": null,
-      "last_verdict": "BROKEN",
+      "non_broken_streak": 1,
+      "recovered_since": "2026-10-16",
+      "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
       "ratings": 238,
-      "users_rendered_pct": 57,
+      "users_rendered_pct": 60,
       "one_star": 179
     },
     "STEAM:Prototype": {
       "name": "Prototype",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 13,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -219,7 +219,7 @@
     "STEAM:Sid Meier's Civilization V": {
       "name": "Sid Meier's Civilization V",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 11,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -231,7 +231,7 @@
     "STEAM:Spelunky 2": {
       "name": "Spelunky 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 8,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -255,7 +255,7 @@
     "STEAM:Counter-Strike": {
       "name": "Counter-Strike",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 14,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -291,7 +291,7 @@
     "STEAM:Plants vs. Zombies: Game of the Year": {
       "name": "Plants vs. Zombies: Game of the Year",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 15,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -303,7 +303,7 @@
     "STEAM:Necesse": {
       "name": "Necesse",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 12,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -316,7 +316,7 @@
       "name": "Saints Row 2",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "FIRST_RUN_FRICTION",
       "last_seen": "2026-10-16",
@@ -351,7 +351,7 @@
     "STEAM:A Plague Tale: Innocence": {
       "name": "A Plague Tale: Innocence",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 64,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -363,7 +363,7 @@
     "STEAM:Far Cry® 3": {
       "name": "Far Cry® 3",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 16,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -375,7 +375,7 @@
     "STEAM:HELLDIVERS™ 2": {
       "name": "HELLDIVERS™ 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 17,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -387,7 +387,7 @@
     "STEAM:Mafia II (Classic)": {
       "name": "Mafia II (Classic)",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 29,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -411,7 +411,7 @@
     "STEAM:Call of Duty: Black Ops II": {
       "name": "Call of Duty: Black Ops II",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 24,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -424,21 +424,21 @@
       "name": "Moonstone Island",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 0,
-      "recovered_since": null,
-      "last_verdict": "BROKEN",
+      "non_broken_streak": 1,
+      "recovered_since": "2026-10-16",
+      "last_verdict": "FIRST_RUN_FRICTION",
       "last_seen": "2026-10-16",
       "ratings": 161,
-      "users_rendered_pct": null,
+      "users_rendered_pct": 80,
       "one_star": 124
     },
     "STEAM:Don't Starve Together": {
       "name": "Don't Starve Together",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 0,
-      "recovered_since": null,
-      "last_verdict": "LIKELY_BROKEN",
+      "non_broken_streak": 1,
+      "recovered_since": "2026-10-16",
+      "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
       "ratings": 161,
       "users_rendered_pct": 59,
@@ -447,7 +447,7 @@
     "STEAM:MECCHA CHAMELEON": {
       "name": "MECCHA CHAMELEON",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 31,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -471,7 +471,7 @@
     "STEAM:Assassin's Creed II": {
       "name": "Assassin's Creed II",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 20,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -495,7 +495,7 @@
     "STEAM:The Elder Scrolls III: Morrowind": {
       "name": "The Elder Scrolls III: Morrowind",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 19,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -519,7 +519,7 @@
     "STEAM:DOOM 3: BFG Edition": {
       "name": "DOOM 3: BFG Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 55,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -531,7 +531,7 @@
     "STEAM:Fall Guys": {
       "name": "Fall Guys",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 370,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -555,7 +555,7 @@
     "STEAM:TBH: Task Bar Hero": {
       "name": "TBH: Task Bar Hero",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 40,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -572,7 +572,7 @@
       "recovered_since": null,
       "last_verdict": "LIKELY_BROKEN",
       "last_seen": "2026-10-16",
-      "ratings": 127,
+      "ratings": 125,
       "users_rendered_pct": null,
       "one_star": 75
     },
@@ -580,9 +580,9 @@
       "name": "Don't Starve",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 0,
-      "recovered_since": null,
-      "last_verdict": "LIKELY_BROKEN",
+      "non_broken_streak": 1,
+      "recovered_since": "2026-10-16",
+      "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
       "ratings": 132,
       "users_rendered_pct": null,
@@ -591,7 +591,7 @@
     "STEAM:Black Mesa": {
       "name": "Black Mesa",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 38,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -603,7 +603,7 @@
     "STEAM:METAL GEAR SOLID - Master Collection Version": {
       "name": "METAL GEAR SOLID - Master Collection Version",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 33,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -615,7 +615,7 @@
     "STEAM:Disgaea 5 Complete": {
       "name": "Disgaea 5 Complete",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 77,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -639,7 +639,7 @@
     "STEAM:Borderlands: The Pre-Sequel": {
       "name": "Borderlands: The Pre-Sequel",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 69,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -651,7 +651,7 @@
     "STEAM:Transistor": {
       "name": "Transistor",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 30,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -675,7 +675,7 @@
     "STEAM:Age of Empires II: Definitive Edition": {
       "name": "Age of Empires II: Definitive Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 26,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -687,7 +687,7 @@
     "STEAM:Dead Space 2": {
       "name": "Dead Space 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 34,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -712,9 +712,9 @@
       "name": "Rayman Origins",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
-      "recovered_since": "2026-10-16",
-      "last_verdict": "MIXED",
+      "non_broken_streak": 0,
+      "recovered_since": null,
+      "last_verdict": "LIKELY_BROKEN",
       "last_seen": "2026-10-16",
       "ratings": 85,
       "users_rendered_pct": null,
@@ -724,9 +724,9 @@
       "name": "Diablo II: Resurrected – Infernal Edition",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 0,
-      "recovered_since": null,
-      "last_verdict": "BROKEN",
+      "non_broken_streak": 1,
+      "recovered_since": "2026-10-16",
+      "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
       "ratings": 120,
       "users_rendered_pct": 41,
@@ -735,7 +735,7 @@
     "STEAM:Dust: An Elysian Tail": {
       "name": "Dust: An Elysian Tail",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 28,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -747,7 +747,7 @@
     "STEAM:Call of Duty: Black Ops II - Zombies": {
       "name": "Call of Duty: Black Ops II - Zombies",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 36,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -771,7 +771,7 @@
     "STEAM:GRID 2": {
       "name": "GRID 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 25,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -784,7 +784,7 @@
       "name": "Street Fighter™ 6",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "FIRST_RUN_FRICTION",
       "last_seen": "2026-10-16",
@@ -795,7 +795,7 @@
     "STEAM:Saints Row: The Third": {
       "name": "Saints Row: The Third",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 27,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -807,7 +807,7 @@
     "STEAM:Mega Man Zero/ZX Legacy Collection": {
       "name": "Mega Man Zero/ZX Legacy Collection",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 52,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -819,7 +819,7 @@
     "STEAM:Burnout™ Paradise Remastered": {
       "name": "Burnout™ Paradise Remastered",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 35,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -843,7 +843,7 @@
     "STEAM:Call of Juarez Gunslinger": {
       "name": "Call of Juarez Gunslinger",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 42,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -855,7 +855,7 @@
     "STEAM:Call of Duty: Modern Warfare 2 (2009)": {
       "name": "Call of Duty: Modern Warfare 2 (2009)",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 45,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -879,7 +879,7 @@
     "STEAM:HELLDIVERS™": {
       "name": "HELLDIVERS™",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 39,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -891,7 +891,7 @@
     "STEAM:Tomb Raider: Anniversary": {
       "name": "Tomb Raider: Anniversary",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 110,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -915,7 +915,7 @@
     "STEAM:Warhammer 40,000: Space Marine - Anniversary Edition": {
       "name": "Warhammer 40,000: Space Marine - Anniversary Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 37,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -951,10 +951,10 @@
     "STEAM:Mini Motorways": {
       "name": "Mini Motorways",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 99,
       "non_broken_streak": 0,
       "recovered_since": null,
-      "last_verdict": "LIKELY_BROKEN",
+      "last_verdict": "BROKEN",
       "last_seen": "2026-10-16",
       "ratings": 98,
       "users_rendered_pct": null,
@@ -964,7 +964,7 @@
       "name": "Baldur's Gate: Enhanced Edition",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -1011,7 +1011,7 @@
     "STEAM:Gunfire Reborn": {
       "name": "Gunfire Reborn",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 46,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1059,10 +1059,10 @@
     "STEAM:Fable - The Lost Chapters": {
       "name": "Fable - The Lost Chapters",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 79,
       "non_broken_streak": 0,
       "recovered_since": null,
-      "last_verdict": "LIKELY_BROKEN",
+      "last_verdict": "BROKEN",
       "last_seen": "2026-10-16",
       "ratings": 91,
       "users_rendered_pct": null,
@@ -1089,13 +1089,13 @@
       "last_verdict": "LIKELY_BROKEN",
       "last_seen": "2026-10-16",
       "ratings": 100,
-      "users_rendered_pct": 19,
+      "users_rendered_pct": 22,
       "one_star": 59
     },
     "STEAM:Need for Speed: Hot Pursuit": {
       "name": "Need for Speed: Hot Pursuit",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 54,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1107,7 +1107,7 @@
     "STEAM:Need for Speed™ Heat ": {
       "name": "Need for Speed™ Heat ",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 49,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1119,7 +1119,7 @@
     "STEAM:Marvel Rivals": {
       "name": "Marvel Rivals",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 47,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1143,7 +1143,7 @@
     "STEAM:The Wolf Among Us": {
       "name": "The Wolf Among Us",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 60,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1155,7 +1155,7 @@
     "STEAM:Borderlands GOTY": {
       "name": "Borderlands GOTY",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 48,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1191,7 +1191,7 @@
     "STEAM:Darksiders": {
       "name": "Darksiders",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 56,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1203,7 +1203,7 @@
     "STEAM:Call of Duty: World at War": {
       "name": "Call of Duty: World at War",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 66,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1239,7 +1239,7 @@
     "STEAM:Breathedge": {
       "name": "Breathedge",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 112,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1251,7 +1251,7 @@
     "STEAM:Metro 2033": {
       "name": "Metro 2033",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 63,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1287,7 +1287,7 @@
     "STEAM:Hitman: Absolution": {
       "name": "Hitman: Absolution",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 105,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1299,7 +1299,7 @@
     "STEAM:FINAL FANTASY XIII-2": {
       "name": "FINAL FANTASY XIII-2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 41,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1323,7 +1323,7 @@
     "STEAM:METAL SLUG 3": {
       "name": "METAL SLUG 3",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 95,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1335,7 +1335,7 @@
     "STEAM:Path of Exile": {
       "name": "Path of Exile",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 59,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1347,7 +1347,7 @@
     "STEAM:Spec Ops: The Line": {
       "name": "Spec Ops: The Line",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 61,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1360,7 +1360,7 @@
       "name": "Alex Kidd in Miracle World DX",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "WORKS",
       "last_seen": "2026-10-16",
@@ -1383,7 +1383,7 @@
     "STEAM:Duskfade": {
       "name": "Duskfade",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 43,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1419,7 +1419,7 @@
     "STEAM:Sniper Elite 4": {
       "name": "Sniper Elite 4",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 44,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1431,7 +1431,7 @@
     "STEAM:Detroit: Become Human": {
       "name": "Detroit: Become Human",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 50,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1479,7 +1479,7 @@
     "STEAM:Breath of Fire IV": {
       "name": "Breath of Fire IV",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 203,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1503,7 +1503,7 @@
     "STEAM:FINAL FANTASY VII (2013)": {
       "name": "FINAL FANTASY VII (2013)",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 102,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1515,7 +1515,7 @@
     "STEAM:Sonic Generations": {
       "name": "Sonic Generations",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 70,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1527,7 +1527,7 @@
     "STEAM:GRID": {
       "name": "GRID",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 67,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1539,7 +1539,7 @@
     "STEAM:Watch_Dogs": {
       "name": "Watch_Dogs",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 82,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1563,7 +1563,7 @@
     "STEAM:Fortune Mill": {
       "name": "Fortune Mill",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 68,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1575,7 +1575,7 @@
     "STEAM:Horizon Zero Dawn™ Complete Edition": {
       "name": "Horizon Zero Dawn™ Complete Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 90,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1587,7 +1587,7 @@
     "STEAM:Deus Ex: Game of the Year Edition": {
       "name": "Deus Ex: Game of the Year Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 76,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1599,7 +1599,7 @@
     "STEAM:Borderlands 3": {
       "name": "Borderlands 3",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 88,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1611,7 +1611,7 @@
     "STEAM:Diablo® IV": {
       "name": "Diablo® IV",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 65,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1635,7 +1635,7 @@
     "STEAM:Door Kickers 2": {
       "name": "Door Kickers 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 57,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1647,7 +1647,7 @@
     "STEAM:DOOM 3": {
       "name": "DOOM 3",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 78,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1671,7 +1671,7 @@
     "STEAM:GOALS": {
       "name": "GOALS",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 118,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1683,7 +1683,7 @@
     "STEAM:XCOM: Enemy Unknown": {
       "name": "XCOM: Enemy Unknown",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 62,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1708,7 +1708,7 @@
       "name": "Little Nightmares",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -1719,7 +1719,7 @@
     "STEAM:tModLoader": {
       "name": "tModLoader",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 73,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1743,7 +1743,7 @@
     "STEAM:Overwatch®": {
       "name": "Overwatch®",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 74,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1779,7 +1779,7 @@
     "STEAM:Asphalt Legends ": {
       "name": "Asphalt Legends ",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 83,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1803,7 +1803,7 @@
     "STEAM:Dead by Daylight": {
       "name": "Dead by Daylight",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 92,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1827,7 +1827,7 @@
     "STEAM:Spore": {
       "name": "Spore",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 75,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1863,7 +1863,7 @@
     "STEAM:Heroes of Might & Magic III - HD Edition": {
       "name": "Heroes of Might & Magic III - HD Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 86,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1875,7 +1875,7 @@
     "STEAM:Sheepy: A Short Adventure": {
       "name": "Sheepy: A Short Adventure",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 87,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1887,7 +1887,7 @@
     "STEAM:Jade Empire: Special Edition": {
       "name": "Jade Empire: Special Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 251,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1900,7 +1900,7 @@
       "name": "Library Of Ruina",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "FIRST_RUN_FRICTION",
       "last_seen": "2026-10-16",
@@ -1923,7 +1923,7 @@
     "STEAM:MY HERO ULTRA RUMBLE": {
       "name": "MY HERO ULTRA RUMBLE",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 91,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1935,7 +1935,7 @@
     "STEAM:Split/Second": {
       "name": "Split/Second",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 89,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1947,7 +1947,7 @@
     "STEAM:Watch_Dogs 2": {
       "name": "Watch_Dogs 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 103,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1971,7 +1971,7 @@
     "STEAM:Dungeons & Dragons: Chronicles of Mystara": {
       "name": "Dungeons & Dragons: Chronicles of Mystara",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 71,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1983,7 +1983,7 @@
     "STEAM:State of Decay 2": {
       "name": "State of Decay 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 116,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -1995,7 +1995,7 @@
     "STEAM:Ghost Trick: Phantom Detective": {
       "name": "Ghost Trick: Phantom Detective",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 72,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2020,7 +2020,7 @@
       "name": "Football Manager 2024",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -2031,7 +2031,7 @@
     "STEAM:GrandChase": {
       "name": "GrandChase",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 84,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2056,7 +2056,7 @@
       "name": "Tales of ARISE",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "FIRST_RUN_FRICTION",
       "last_seen": "2026-10-16",
@@ -2091,7 +2091,7 @@
     "STEAM:Aliens vs. Predator": {
       "name": "Aliens vs. Predator",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 96,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2103,7 +2103,7 @@
     "STEAM:STAR WARS™ Republic Commando": {
       "name": "STAR WARS™ Republic Commando",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 106,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2115,7 +2115,7 @@
     "STEAM:DEATH STRANDING DIRECTOR'S CUT": {
       "name": "DEATH STRANDING DIRECTOR'S CUT",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 139,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2128,7 +2128,7 @@
       "name": "PlateUp!",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "FIRST_RUN_FRICTION",
       "last_seen": "2026-10-16",
@@ -2139,7 +2139,7 @@
     "STEAM:Trackmania": {
       "name": "Trackmania",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 117,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2187,7 +2187,7 @@
     "STEAM:ARC Raiders": {
       "name": "ARC Raiders",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 104,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2199,7 +2199,7 @@
     "STEAM:Sleeping Dogs™": {
       "name": "Sleeping Dogs™",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 94,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2211,7 +2211,7 @@
     "STEAM:Three Kingdoms : Alias": {
       "name": "Three Kingdoms : Alias",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 81,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2223,7 +2223,7 @@
     "STEAM:Lost Planet: Extreme Condition": {
       "name": "Lost Planet: Extreme Condition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 173,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2259,7 +2259,7 @@
     "STEAM:Call of Duty®": {
       "name": "Call of Duty®",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 124,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2283,7 +2283,7 @@
     "STEAM:The Survivalists": {
       "name": "The Survivalists",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 85,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2295,7 +2295,7 @@
     "STEAM:Capcom Fighting Collection": {
       "name": "Capcom Fighting Collection",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 97,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2308,9 +2308,9 @@
       "name": "Bloodstained: Curse of the Moon",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 0,
-      "recovered_since": null,
-      "last_verdict": "LIKELY_BROKEN",
+      "non_broken_streak": 1,
+      "recovered_since": "2026-10-16",
+      "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
       "ratings": 63,
       "users_rendered_pct": null,
@@ -2355,7 +2355,7 @@
     "STEAM:Elite Dangerous": {
       "name": "Elite Dangerous",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 132,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2367,7 +2367,7 @@
     "STEAM:Strider": {
       "name": "Strider",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 126,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2379,7 +2379,7 @@
     "STEAM:Command & Conquer: Red Alert™ 2 and Yuri’s Revenge™": {
       "name": "Command & Conquer: Red Alert™ 2 and Yuri’s Revenge™",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 93,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2391,7 +2391,7 @@
     "STEAM:Hitman: Blood Money": {
       "name": "Hitman: Blood Money",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 128,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2403,7 +2403,7 @@
     "STEAM:SnowRunner": {
       "name": "SnowRunner",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 130,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2439,7 +2439,7 @@
     "STEAM:Rayman Legends": {
       "name": "Rayman Legends",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 201,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2451,7 +2451,7 @@
     "STEAM:RoboCop: Rogue City": {
       "name": "RoboCop: Rogue City",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 100,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2463,7 +2463,7 @@
     "STEAM:Alpha Protocol": {
       "name": "Alpha Protocol",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 135,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2475,7 +2475,7 @@
     "STEAM:Max Payne 3": {
       "name": "Max Payne 3",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 98,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2488,9 +2488,9 @@
       "name": "Street Fighter 30th Anniversary Collection",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
-      "last_verdict": "FIRST_RUN_FRICTION",
+      "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
       "ratings": 60,
       "users_rendered_pct": 64,
@@ -2499,7 +2499,7 @@
     "STEAM:Sandustry": {
       "name": "Sandustry",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 113,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2552,14 +2552,14 @@
       "recovered_since": null,
       "last_verdict": "LIKELY_BROKEN",
       "last_seen": "2026-10-16",
-      "ratings": 54,
+      "ratings": 47,
       "users_rendered_pct": null,
-      "one_star": 34
+      "one_star": 27
     },
     "STEAM:Secrets of Grindea": {
       "name": "Secrets of Grindea",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 169,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2571,7 +2571,7 @@
     "STEAM:Aggelos": {
       "name": "Aggelos",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 148,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2583,7 +2583,7 @@
     "STEAM:Prince of Persia The Lost Crown": {
       "name": "Prince of Persia The Lost Crown",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 114,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2595,7 +2595,7 @@
     "STEAM:Shin Megami Tensei III Nocturne HD Remaster": {
       "name": "Shin Megami Tensei III Nocturne HD Remaster",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 108,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2607,7 +2607,7 @@
     "STEAM:Dark Sector": {
       "name": "Dark Sector",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 163,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2619,7 +2619,7 @@
     "STEAM:DOOM Eternal": {
       "name": "DOOM Eternal",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 115,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2655,7 +2655,7 @@
     "STEAM:Blossom Tales: The Sleeping King": {
       "name": "Blossom Tales: The Sleeping King",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 119,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2691,7 +2691,7 @@
     "STEAM:Dead Space": {
       "name": "Dead Space",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 131,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2703,7 +2703,7 @@
     "STEAM:Metro: Last Light Complete Edition": {
       "name": "Metro: Last Light Complete Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 188,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2727,7 +2727,7 @@
     "STEAM:Capcom Arcade Stadium": {
       "name": "Capcom Arcade Stadium",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 140,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2751,7 +2751,7 @@
     "STEAM:Mafia": {
       "name": "Mafia",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 120,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2775,7 +2775,7 @@
     "STEAM:ScourgeBringer": {
       "name": "ScourgeBringer",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 141,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2799,7 +2799,7 @@
     "STEAM:South Park The Fractured But Whole": {
       "name": "South Park The Fractured But Whole",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 101,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2811,7 +2811,7 @@
     "STEAM:Capcom Fighting Collection 2": {
       "name": "Capcom Fighting Collection 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 149,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2835,7 +2835,7 @@
     "STEAM:STAR WARS Zero Company™": {
       "name": "STAR WARS Zero Company™",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 107,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2859,7 +2859,7 @@
     "STEAM:FINAL FANTASY VIII": {
       "name": "FINAL FANTASY VIII",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 150,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2872,7 +2872,7 @@
       "name": "Titan Quest Anniversary Edition",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -2883,7 +2883,7 @@
     "STEAM:Grand Theft Auto III": {
       "name": "Grand Theft Auto III",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 171,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -2931,7 +2931,7 @@
     "STEAM:Enshrouded": {
       "name": "Enshrouded",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 129,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3015,7 +3015,7 @@
     "STEAM:Dark Messiah of Might & Magic Single Player": {
       "name": "Dark Messiah of Might & Magic Single Player",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 121,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3027,7 +3027,7 @@
     "STEAM:Scott Pilgrim vs The World": {
       "name": "Scott Pilgrim vs The World",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 109,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3040,7 +3040,7 @@
       "name": "Deadlock",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "FIRST_RUN_FRICTION",
       "last_seen": "2026-10-16",
@@ -3063,7 +3063,7 @@
     "STEAM:Romestead": {
       "name": "Romestead",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 164,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3075,7 +3075,7 @@
     "STEAM:EA SPORTS FC™ 26": {
       "name": "EA SPORTS FC™ 26",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 172,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3123,7 +3123,7 @@
     "STEAM:SimCity 4 Deluxe": {
       "name": "SimCity 4 Deluxe",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 186,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3135,7 +3135,7 @@
     "STEAM:Tales of Berseria": {
       "name": "Tales of Berseria",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 123,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3159,7 +3159,7 @@
     "STEAM:STAR WARS™ Episode I Racer": {
       "name": "STAR WARS™ Episode I Racer",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 122,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3207,7 +3207,7 @@
     "STEAM:DJMAX RESPECT V": {
       "name": "DJMAX RESPECT V",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 137,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3219,7 +3219,7 @@
     "STEAM:Ultimate Custom Night": {
       "name": "Ultimate Custom Night",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 182,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3256,13 +3256,13 @@
       "name": "DRAGON BALL XENOVERSE",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 0,
-      "recovered_since": null,
-      "last_verdict": "LIKELY_BROKEN",
+      "non_broken_streak": 1,
+      "recovered_since": "2026-10-16",
+      "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
-      "ratings": 22,
+      "ratings": 21,
       "users_rendered_pct": null,
-      "one_star": 11
+      "one_star": 10
     },
     "STEAM:This War of Mine": {
       "name": "This War of Mine",
@@ -3279,7 +3279,7 @@
     "STEAM:Gauntlet™ ": {
       "name": "Gauntlet™ ",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 157,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3291,7 +3291,7 @@
     "STEAM:Marvel's Midnight Suns": {
       "name": "Marvel's Midnight Suns",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 224,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3304,7 +3304,7 @@
       "name": "Middle-earth™: Shadow of War™",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -3351,7 +3351,7 @@
     "STEAM:Mafia III: Definitive Edition": {
       "name": "Mafia III: Definitive Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 311,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3363,7 +3363,7 @@
     "STEAM:METAL GEAR & METAL GEAR 2: Solid Snake": {
       "name": "METAL GEAR & METAL GEAR 2: Solid Snake",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 179,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3375,7 +3375,7 @@
     "STEAM:Axiom Verge 2": {
       "name": "Axiom Verge 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 134,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3387,7 +3387,7 @@
     "STEAM:ELDEN RING NIGHTREIGN": {
       "name": "ELDEN RING NIGHTREIGN",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 180,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3423,7 +3423,7 @@
     "STEAM:Mass Effect (2007)": {
       "name": "Mass Effect (2007)",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 165,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3435,7 +3435,7 @@
     "STEAM:Beat Cop": {
       "name": "Beat Cop",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 291,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3447,7 +3447,7 @@
     "STEAM:Forza Horizon 6": {
       "name": "Forza Horizon 6",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 138,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3459,7 +3459,7 @@
     "STEAM:Sir, We Have an Orc Problem": {
       "name": "Sir, We Have an Orc Problem",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 145,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3483,7 +3483,7 @@
     "STEAM:The Darkness II": {
       "name": "The Darkness II",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 144,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3495,7 +3495,7 @@
     "STEAM:Subnautica 2": {
       "name": "Subnautica 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 205,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3507,7 +3507,7 @@
     "STEAM:OneShot": {
       "name": "OneShot",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 174,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3519,7 +3519,7 @@
     "STEAM:DiRT Showdown": {
       "name": "DiRT Showdown",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 168,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3543,7 +3543,7 @@
     "STEAM:CODE VEIN": {
       "name": "CODE VEIN",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 181,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3567,7 +3567,7 @@
     "STEAM:Insaniquarium! Deluxe": {
       "name": "Insaniquarium! Deluxe",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 189,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3580,7 +3580,7 @@
       "name": "Max Payne 2: The Fall of Max Payne",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -3592,7 +3592,7 @@
       "name": "CarX Drift Racing Online",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -3603,7 +3603,7 @@
     "STEAM:PRAGMATA": {
       "name": "PRAGMATA",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 176,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3627,7 +3627,7 @@
     "STEAM:Crab Game": {
       "name": "Crab Game",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 197,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3675,7 +3675,7 @@
     "STEAM:Barotrauma": {
       "name": "Barotrauma",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 146,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3699,7 +3699,7 @@
     "STEAM:Hob": {
       "name": "Hob",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 416,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3711,7 +3711,7 @@
     "STEAM:Lara Croft and the Guardian of Light": {
       "name": "Lara Croft and the Guardian of Light",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 167,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3747,7 +3747,7 @@
     "STEAM:Monster Hunter Stories 3: Twisted Reflection": {
       "name": "Monster Hunter Stories 3: Twisted Reflection",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 153,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3771,7 +3771,7 @@
     "STEAM:GeoGuessr Steam Edition": {
       "name": "GeoGuessr Steam Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 154,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3783,7 +3783,7 @@
     "STEAM:Alien Breed: Impact": {
       "name": "Alien Breed: Impact",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 249,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3795,7 +3795,7 @@
     "STEAM:BattleBit Remastered": {
       "name": "BattleBit Remastered",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 159,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3819,7 +3819,7 @@
     "STEAM:Jotunnslayer: Hordes of Hel": {
       "name": "Jotunnslayer: Hordes of Hel",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 382,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3831,7 +3831,7 @@
     "STEAM:FINAL FANTASY VII REBIRTH": {
       "name": "FINAL FANTASY VII REBIRTH",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 158,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3843,7 +3843,7 @@
     "STEAM:Fahrenheit: Indigo Prophecy Remastered": {
       "name": "Fahrenheit: Indigo Prophecy Remastered",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 190,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3867,7 +3867,7 @@
     "STEAM:SOMA": {
       "name": "SOMA",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 256,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3879,7 +3879,7 @@
     "STEAM:Monster Hunter Wilds": {
       "name": "Monster Hunter Wilds",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 161,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3915,7 +3915,7 @@
     "STEAM:Wuthering Waves": {
       "name": "Wuthering Waves",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 216,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3951,7 +3951,7 @@
     "STEAM:Marvel's Spider-Man 2": {
       "name": "Marvel's Spider-Man 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 143,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3963,7 +3963,7 @@
     "STEAM:Forza Horizon 5": {
       "name": "Forza Horizon 5",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 187,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -3975,7 +3975,7 @@
     "STEAM:Zuma Deluxe": {
       "name": "Zuma Deluxe",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 206,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4011,7 +4011,7 @@
     "STEAM:War Thunder": {
       "name": "War Thunder",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 198,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4023,7 +4023,7 @@
     "STEAM:Need for Speed™ Rivals": {
       "name": "Need for Speed™ Rivals",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 185,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4059,7 +4059,7 @@
     "STEAM:Crazy Taxi": {
       "name": "Crazy Taxi",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 234,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4071,7 +4071,7 @@
     "STEAM:Bongo Cat": {
       "name": "Bongo Cat",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 228,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4095,7 +4095,7 @@
     "STEAM:FINAL FANTASY XV WINDOWS EDITION": {
       "name": "FINAL FANTASY XV WINDOWS EDITION",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 240,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4107,7 +4107,7 @@
     "STEAM:Nioh: Complete Edition": {
       "name": "Nioh: Complete Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 204,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4131,7 +4131,7 @@
     "STEAM:METAL GEAR SOLID 3: Snake Eater - Master Collection Version": {
       "name": "METAL GEAR SOLID 3: Snake Eater - Master Collection Version",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 220,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4143,7 +4143,7 @@
     "STEAM:Path of Exile 2": {
       "name": "Path of Exile 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 199,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4203,7 +4203,7 @@
     "STEAM:Hitman 2: Silent Assassin": {
       "name": "Hitman 2: Silent Assassin",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 275,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4227,7 +4227,7 @@
     "STEAM:Magicka": {
       "name": "Magicka",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 191,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4239,7 +4239,7 @@
     "STEAM:Dragon's Dogma 2": {
       "name": "Dragon's Dogma 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 177,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4263,7 +4263,7 @@
     "STEAM:Umamusume: Pretty Derby": {
       "name": "Umamusume: Pretty Derby",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 178,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4276,7 +4276,7 @@
       "name": "Mafia II: Definitive Edition",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -4287,7 +4287,7 @@
     "STEAM:Cities: Skylines": {
       "name": "Cities: Skylines",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 233,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4299,7 +4299,7 @@
     "STEAM:BIT.TRIP RUNNER": {
       "name": "BIT.TRIP RUNNER",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 160,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4311,7 +4311,7 @@
     "STEAM:Wolfenstein 3D": {
       "name": "Wolfenstein 3D",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 200,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4335,7 +4335,7 @@
     "STEAM:Palia": {
       "name": "Palia",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 267,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4371,7 +4371,7 @@
     "STEAM:Goose Goose Duck": {
       "name": "Goose Goose Duck",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 236,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4395,7 +4395,7 @@
     "STEAM:Need for Speed™ Hot Pursuit Remastered": {
       "name": "Need for Speed™ Hot Pursuit Remastered",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 193,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4408,7 +4408,7 @@
       "name": "Yume Nikki",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -4431,7 +4431,7 @@
     "STEAM:King's Bounty: The Legend": {
       "name": "King's Bounty: The Legend",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 218,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4443,7 +4443,7 @@
     "STEAM:Utopia Must Fall": {
       "name": "Utopia Must Fall",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 155,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4491,7 +4491,7 @@
     "STEAM:Super Animal Royale": {
       "name": "Super Animal Royale",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 237,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4515,7 +4515,7 @@
     "STEAM:Far Cry 4": {
       "name": "Far Cry 4",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 215,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4527,7 +4527,7 @@
     "STEAM:The Planet Crafter": {
       "name": "The Planet Crafter",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 229,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4539,7 +4539,7 @@
     "STEAM:The Last Stand: Aftermath": {
       "name": "The Last Stand: Aftermath",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 324,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4551,7 +4551,7 @@
     "STEAM:Counter-Strike: Condition Zero": {
       "name": "Counter-Strike: Condition Zero",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 223,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4587,7 +4587,7 @@
     "STEAM:Far Cry® 3 Blood Dragon": {
       "name": "Far Cry® 3 Blood Dragon",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 208,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4599,7 +4599,7 @@
     "STEAM:The Elder Scrolls II: Daggerfall": {
       "name": "The Elder Scrolls II: Daggerfall",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 355,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4611,7 +4611,7 @@
     "STEAM:Tales of Zestiria": {
       "name": "Tales of Zestiria",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 194,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4635,7 +4635,7 @@
     "STEAM:Need for Speed™": {
       "name": "Need for Speed™",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 192,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4731,7 +4731,7 @@
     "STEAM:Muv-Luv": {
       "name": "Muv-Luv",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 196,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4755,7 +4755,7 @@
     "STEAM:Content Warning": {
       "name": "Content Warning",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 241,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4767,7 +4767,7 @@
     "STEAM:Russian Fishing 4": {
       "name": "Russian Fishing 4",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 214,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4779,7 +4779,7 @@
     "STEAM:shapez": {
       "name": "shapez",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 332,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4820,14 +4820,14 @@
       "recovered_since": null,
       "last_verdict": "LIKELY_BROKEN",
       "last_seen": "2026-10-16",
-      "ratings": 25,
+      "ratings": 24,
       "users_rendered_pct": null,
-      "one_star": 15
+      "one_star": 14
     },
     "STEAM:Persona 5 Strikers": {
       "name": "Persona 5 Strikers",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 207,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4875,7 +4875,7 @@
     "STEAM:The Lord of the Rings: War in the North": {
       "name": "The Lord of the Rings: War in the North",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 195,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4900,7 +4900,7 @@
       "name": "Blood: Fresh Supply",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -4935,7 +4935,7 @@
     "STEAM:Assassin's Creed IV Black Flag": {
       "name": "Assassin's Creed IV Black Flag",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 244,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4947,10 +4947,10 @@
     "STEAM:Lobotomy Corporation": {
       "name": "Lobotomy Corporation",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 351,
       "non_broken_streak": 0,
       "recovered_since": null,
-      "last_verdict": "LIKELY_BROKEN",
+      "last_verdict": "BROKEN",
       "last_seen": "2026-10-16",
       "ratings": 35,
       "users_rendered_pct": null,
@@ -4971,7 +4971,7 @@
     "STEAM:War of Dots": {
       "name": "War of Dots",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 274,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -4988,14 +4988,14 @@
       "recovered_since": null,
       "last_verdict": "LIKELY_BROKEN",
       "last_seen": "2026-10-16",
-      "ratings": 33,
+      "ratings": 32,
       "users_rendered_pct": null,
-      "one_star": 22
+      "one_star": 21
     },
     "STEAM:WRC 7": {
       "name": "WRC 7",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 202,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5007,7 +5007,7 @@
     "STEAM:CRUEL": {
       "name": "CRUEL",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 242,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5043,7 +5043,7 @@
     "STEAM:Resident Evil Requiem": {
       "name": "Resident Evil Requiem",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 210,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5055,7 +5055,7 @@
     "STEAM:Borderlands 2 RU": {
       "name": "Borderlands 2 RU",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 217,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5115,7 +5115,7 @@
     "STEAM:Resident Evil Requiem - Demo": {
       "name": "Resident Evil Requiem - Demo",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 379,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5127,7 +5127,7 @@
     "STEAM:CarX Street": {
       "name": "CarX Street",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 255,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5139,7 +5139,7 @@
     "STEAM:Bingle Bingle": {
       "name": "Bingle Bingle",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 225,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5151,7 +5151,7 @@
     "STEAM:MARVEL Tōkon: Fighting Souls": {
       "name": "MARVEL Tōkon: Fighting Souls",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 266,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5163,7 +5163,7 @@
     "STEAM:Apotheon": {
       "name": "Apotheon",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 309,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5175,7 +5175,7 @@
     "STEAM:PAYDAY 2": {
       "name": "PAYDAY 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 260,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5187,7 +5187,7 @@
     "STEAM:Bionic Commando Rearmed": {
       "name": "Bionic Commando Rearmed",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 245,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5200,7 +5200,7 @@
       "name": "Resident Evil 3: Raccoon City Demo ",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -5211,7 +5211,7 @@
     "STEAM:Grand Theft Auto III - The Definitive Edition": {
       "name": "Grand Theft Auto III - The Definitive Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 219,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5235,7 +5235,7 @@
     "STEAM:Call of Juarez": {
       "name": "Call of Juarez",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 347,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5247,7 +5247,7 @@
     "STEAM:Quantum Break": {
       "name": "Quantum Break",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 211,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5271,7 +5271,7 @@
     "STEAM:Hakuoki: Kyoto Winds": {
       "name": "Hakuoki: Kyoto Winds",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 209,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5283,7 +5283,7 @@
     "STEAM:CPM 2": {
       "name": "CPM 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 243,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5307,7 +5307,7 @@
     "STEAM:Tearscape": {
       "name": "Tearscape",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 248,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5343,7 +5343,7 @@
     "STEAM:PICO PARK:Classic Edition": {
       "name": "PICO PARK:Classic Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 279,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5367,7 +5367,7 @@
     "STEAM:FINAL FANTASY XIV Online": {
       "name": "FINAL FANTASY XIV Online",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 270,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5415,7 +5415,7 @@
     "STEAM:Sacred Gold": {
       "name": "Sacred Gold",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 334,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5428,7 +5428,7 @@
       "name": "Tom Clancy's Splinter Cell: Chaos Theory",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -5451,7 +5451,7 @@
     "STEAM:SAMURAI SHODOWN": {
       "name": "SAMURAI SHODOWN",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 212,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5475,7 +5475,7 @@
     "STEAM:Party Animals": {
       "name": "Party Animals",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 268,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5487,7 +5487,7 @@
     "STEAM:Surviving Mars": {
       "name": "Surviving Mars",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 372,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5523,7 +5523,7 @@
     "STEAM:Melatonin": {
       "name": "Melatonin",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 272,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5536,7 +5536,7 @@
       "name": "TowerFall Ascension",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -5559,7 +5559,7 @@
     "STEAM:Fallen Aces": {
       "name": "Fallen Aces",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 250,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5571,7 +5571,7 @@
     "STEAM:Nex Machina": {
       "name": "Nex Machina",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 323,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5583,7 +5583,7 @@
     "STEAM:Peggle Nights": {
       "name": "Peggle Nights",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 252,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5595,7 +5595,7 @@
     "STEAM:Tom Clancy's Splinter Cell: Conviction": {
       "name": "Tom Clancy's Splinter Cell: Conviction",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 227,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5608,7 +5608,7 @@
       "name": "NiGHTS into Dreams...",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -5655,7 +5655,7 @@
     "STEAM:Dishonored 2": {
       "name": "Dishonored 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 353,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5679,7 +5679,7 @@
     "STEAM:Knights of Pen and Paper 2": {
       "name": "Knights of Pen and Paper 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 259,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5703,7 +5703,7 @@
     "STEAM:Turing Complete": {
       "name": "Turing Complete",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 238,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5715,7 +5715,7 @@
     "STEAM:S.T.A.L.K.E.R.: Shadow of Chernobyl": {
       "name": "S.T.A.L.K.E.R.: Shadow of Chernobyl",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 371,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5739,7 +5739,7 @@
     "STEAM:Blossom Tales 2: The Minotaur Prince": {
       "name": "Blossom Tales 2: The Minotaur Prince",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 231,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5751,7 +5751,7 @@
     "STEAM:ENDLESS Space™ 2": {
       "name": "ENDLESS Space™ 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 246,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5763,7 +5763,7 @@
     "STEAM:창세기전 외전: 서풍의 광시곡 리마스터": {
       "name": "창세기전 외전: 서풍의 광시곡 리마스터",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 257,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5787,7 +5787,7 @@
     "STEAM:Euro Truck Simulator": {
       "name": "Euro Truck Simulator",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 253,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5800,7 +5800,7 @@
       "name": "Gloomhaven",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -5812,7 +5812,7 @@
       "name": "Intravenous",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -5847,7 +5847,7 @@
     "STEAM:Zenless Zone Zero": {
       "name": "Zenless Zone Zero",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 369,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5859,7 +5859,7 @@
     "STEAM:Need for Speed: Undercover": {
       "name": "Need for Speed: Undercover",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 292,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5871,7 +5871,7 @@
     "STEAM:Fogpiercer": {
       "name": "Fogpiercer",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 303,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5883,7 +5883,7 @@
     "STEAM:Northgard: Definitive Edition": {
       "name": "Northgard: Definitive Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 232,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5895,7 +5895,7 @@
     "STEAM:Blood Bowl 2": {
       "name": "Blood Bowl 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 258,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5919,7 +5919,7 @@
     "STEAM:Assassin's Creed Origins": {
       "name": "Assassin's Creed Origins",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 301,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5979,7 +5979,7 @@
     "STEAM:Spiral Knights": {
       "name": "Spiral Knights",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 263,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -5991,7 +5991,7 @@
     "STEAM:Yuppie Psycho": {
       "name": "Yuppie Psycho",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 325,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6003,7 +6003,7 @@
     "STEAM:Apex Legends": {
       "name": "Apex Legends",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 261,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6015,7 +6015,7 @@
     "STEAM:Resident Evil Village Gold Edition Gameplay Demo": {
       "name": "Resident Evil Village Gold Edition Gameplay Demo",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 331,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6027,7 +6027,7 @@
     "STEAM:Combat Master": {
       "name": "Combat Master",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 262,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6075,7 +6075,7 @@
     "STEAM:Sid Meier's Pirates!": {
       "name": "Sid Meier's Pirates!",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 293,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6111,7 +6111,7 @@
     "STEAM:Guacamelee! Gold Edition": {
       "name": "Guacamelee! Gold Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 322,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6147,7 +6147,7 @@
     "STEAM:Transformers: Fall of Cybertron": {
       "name": "Transformers: Fall of Cybertron",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 304,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6171,7 +6171,7 @@
     "STEAM:ONE PIECE: PIRATE WARRIORS 4": {
       "name": "ONE PIECE: PIRATE WARRIORS 4",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 277,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6243,7 +6243,7 @@
     "STEAM:TEKKEN 8": {
       "name": "TEKKEN 8",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 306,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6255,7 +6255,7 @@
     "STEAM:Assassin's Creed Odyssey": {
       "name": "Assassin's Creed Odyssey",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 390,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6267,7 +6267,7 @@
     "STEAM:Need for Speed™ Unbound": {
       "name": "Need for Speed™ Unbound",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 285,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6279,7 +6279,7 @@
     "STEAM:Half-Life: Blue Shift": {
       "name": "Half-Life: Blue Shift",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 305,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6292,7 +6292,7 @@
       "name": "Titanfall® 2",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "FIRST_RUN_FRICTION",
       "last_seen": "2026-10-16",
@@ -6351,7 +6351,7 @@
     "STEAM:Legend of Grimrock 2": {
       "name": "Legend of Grimrock 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 352,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6375,7 +6375,7 @@
     "STEAM:My Singing Monsters": {
       "name": "My Singing Monsters",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 278,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6387,7 +6387,7 @@
     "STEAM:Solo Leveling: ARISE OVERDRIVE": {
       "name": "Solo Leveling: ARISE OVERDRIVE",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 239,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6411,7 +6411,7 @@
     "STEAM:Command & Conquer™ Red Alert™ 3": {
       "name": "Command & Conquer™ Red Alert™ 3",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 327,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6423,7 +6423,7 @@
     "STEAM:Assassin's Creed Rogue": {
       "name": "Assassin's Creed Rogue",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 271,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6471,7 +6471,7 @@
     "STEAM:Assassin's Creed Brotherhood": {
       "name": "Assassin's Creed Brotherhood",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 310,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6507,7 +6507,7 @@
     "STEAM:They Are Billions": {
       "name": "They Are Billions",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 281,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6519,7 +6519,7 @@
     "STEAM:The Legend of Heroes: Trails of Cold Steel": {
       "name": "The Legend of Heroes: Trails of Cold Steel",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 373,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6555,7 +6555,7 @@
     "STEAM:Tom Clancy's Ghost Recon® Wildlands": {
       "name": "Tom Clancy's Ghost Recon® Wildlands",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 280,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6579,7 +6579,7 @@
     "STEAM:The Swapper": {
       "name": "The Swapper",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 283,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6603,7 +6603,7 @@
     "STEAM:Rune Factory 5": {
       "name": "Rune Factory 5",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 358,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6615,7 +6615,7 @@
     "STEAM:Grand Theft Auto: Vice City - The Definitive Edition": {
       "name": "Grand Theft Auto: Vice City - The Definitive Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 316,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6627,7 +6627,7 @@
     "STEAM:Destiny 2": {
       "name": "Destiny 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 315,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6639,7 +6639,7 @@
     "STEAM:No More Room in Hell": {
       "name": "No More Room in Hell",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 365,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6663,7 +6663,7 @@
     "STEAM:SONIC THE HEDGEHOG 4 Episode I": {
       "name": "SONIC THE HEDGEHOG 4 Episode I",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 294,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6675,7 +6675,7 @@
     "STEAM:The Last of Us™ Part I": {
       "name": "The Last of Us™ Part I",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 300,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6795,7 +6795,7 @@
     "STEAM:Aggelos 2": {
       "name": "Aggelos 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 307,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6807,7 +6807,7 @@
     "STEAM:Isle of Reveries": {
       "name": "Isle of Reveries",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 254,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6831,7 +6831,7 @@
     "STEAM:Battlefield™ 6": {
       "name": "Battlefield™ 6",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 335,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6855,7 +6855,7 @@
     "STEAM:Freddy Fazbear's Pizzeria Simulator": {
       "name": "Freddy Fazbear's Pizzeria Simulator",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 411,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6879,7 +6879,7 @@
     "STEAM:Tom Clancy's Splinter Cell": {
       "name": "Tom Clancy's Splinter Cell",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 417,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6903,7 +6903,7 @@
     "STEAM:Dragon Age™ Inquisition": {
       "name": "Dragon Age™ Inquisition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 296,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6915,7 +6915,7 @@
     "STEAM:Halo: Spartan Assault": {
       "name": "Halo: Spartan Assault",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 284,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6939,7 +6939,7 @@
     "STEAM:Sonic and SEGA All Stars Racing": {
       "name": "Sonic and SEGA All Stars Racing",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 394,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6975,7 +6975,7 @@
     "STEAM:F.E.A.R. 3": {
       "name": "F.E.A.R. 3",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 362,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -6999,7 +6999,7 @@
     "STEAM:Assassin's Creed Revelations": {
       "name": "Assassin's Creed Revelations",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 313,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7035,7 +7035,7 @@
     "STEAM:Odallus: The Dark Call": {
       "name": "Odallus: The Dark Call",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 337,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7047,7 +7047,7 @@
     "STEAM:Gears 5": {
       "name": "Gears 5",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 264,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7071,7 +7071,7 @@
     "STEAM:AION 2": {
       "name": "AION 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 282,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7083,7 +7083,7 @@
     "STEAM:Spark the Electric Jester": {
       "name": "Spark the Electric Jester",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 377,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7095,7 +7095,7 @@
     "STEAM:NBA 2K26": {
       "name": "NBA 2K26",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 384,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7132,7 +7132,7 @@
       "name": "Divinity: Original Sin (Classic)",
       "store": "STEAM",
       "issue_number": null,
-      "non_broken_streak": 2,
+      "non_broken_streak": 3,
       "recovered_since": "2026-10-16",
       "last_verdict": "MIXED",
       "last_seen": "2026-10-16",
@@ -7191,7 +7191,7 @@
     "STEAM:Halo Infinite": {
       "name": "Halo Infinite",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 348,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7251,7 +7251,7 @@
     "STEAM:Age of Mythology: Retold": {
       "name": "Age of Mythology: Retold",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 295,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7275,7 +7275,7 @@
     "STEAM:Deus Ex: Invisible War": {
       "name": "Deus Ex: Invisible War",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 341,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7287,7 +7287,7 @@
     "STEAM:Sniper Elite V2": {
       "name": "Sniper Elite V2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 376,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7371,7 +7371,7 @@
     "STEAM:Grand Theft Auto: San Andreas - The Definitive Edition": {
       "name": "Grand Theft Auto: San Andreas - The Definitive Edition",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 357,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7383,7 +7383,7 @@
     "STEAM:Resident Evil 3 Nemesis (1999)": {
       "name": "Resident Evil 3 Nemesis (1999)",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 273,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7395,7 +7395,7 @@
     "STEAM:AdVenture Capitalist": {
       "name": "AdVenture Capitalist",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 308,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7407,7 +7407,7 @@
     "STEAM:Bejeweled 2 Deluxe": {
       "name": "Bejeweled 2 Deluxe",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 329,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7419,7 +7419,7 @@
     "STEAM:Portal: First Slice": {
       "name": "Portal: First Slice",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 354,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7467,7 +7467,7 @@
     "STEAM:The Elder Scrolls IV: Oblivion Remastered": {
       "name": "The Elder Scrolls IV: Oblivion Remastered",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 312,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7503,7 +7503,7 @@
     "STEAM:Once Human": {
       "name": "Once Human",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 395,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7527,7 +7527,7 @@
     "STEAM:SPITE: Taking the Boss's Wife, Sister and Mother": {
       "name": "SPITE: Taking the Boss's Wife, Sister and Mother",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 346,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7563,7 +7563,7 @@
     "STEAM:Realm of the Mad God Exalt": {
       "name": "Realm of the Mad God Exalt",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 359,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7587,7 +7587,7 @@
     "STEAM:Mindustry": {
       "name": "Mindustry",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 403,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7623,7 +7623,7 @@
     "STEAM:STALZONE": {
       "name": "STALZONE",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 338,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7635,7 +7635,7 @@
     "STEAM:Monster Hunter Rise: Sunbreak Demo": {
       "name": "Monster Hunter Rise: Sunbreak Demo",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 318,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7719,7 +7719,7 @@
     "STEAM:33 Immortals": {
       "name": "33 Immortals",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 339,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7839,7 +7839,7 @@
     "STEAM:Hell Yeah!": {
       "name": "Hell Yeah!",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 297,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7887,7 +7887,7 @@
     "STEAM:The Lantern of the Laughless Saint": {
       "name": "The Lantern of the Laughless Saint",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 299,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7899,7 +7899,7 @@
     "STEAM:G-MODEアーカイブス+ ペルソナ3 アイギス THE FIRST MISSION": {
       "name": "G-MODEアーカイブス+ ペルソナ3 アイギス THE FIRST MISSION",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 400,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7911,7 +7911,7 @@
     "STEAM:BAJA: Edge of Control HD": {
       "name": "BAJA: Edge of Control HD",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 333,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7935,7 +7935,7 @@
     "STEAM:STAR WARS: Galactic Racer™": {
       "name": "STAR WARS: Galactic Racer™",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 288,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7947,7 +7947,7 @@
     "STEAM:Marie's Adventure": {
       "name": "Marie's Adventure",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 287,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7959,7 +7959,7 @@
     "STEAM:The Long Drive": {
       "name": "The Long Drive",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 404,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -7983,7 +7983,7 @@
     "STEAM:RollerCoaster Tycoon: Deluxe": {
       "name": "RollerCoaster Tycoon: Deluxe",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 345,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8007,7 +8007,7 @@
     "STEAM:3on3 FreeStyle: Rebound": {
       "name": "3on3 FreeStyle: Rebound",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 410,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8019,7 +8019,7 @@
     "STEAM:Call of Duty 2": {
       "name": "Call of Duty 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 340,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8031,7 +8031,7 @@
     "STEAM:Road to Empress I": {
       "name": "Road to Empress I",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 344,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8055,7 +8055,7 @@
     "STEAM:Downfall - A Slay the Spire Fan Expansion": {
       "name": "Downfall - A Slay the Spire Fan Expansion",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 320,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8079,7 +8079,7 @@
     "STEAM:Tom Clancy's Splinter Cell Blacklist": {
       "name": "Tom Clancy's Splinter Cell Blacklist",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 367,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8091,7 +8091,7 @@
     "STEAM:Crusader Kings III": {
       "name": "Crusader Kings III",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 397,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8187,7 +8187,7 @@
     "STEAM:Grounded 2": {
       "name": "Grounded 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 317,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8211,7 +8211,7 @@
     "STEAM:Gothic 1 Remake": {
       "name": "Gothic 1 Remake",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 336,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8235,7 +8235,7 @@
     "STEAM:Chronicles of the Wolf": {
       "name": "Chronicles of the Wolf",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 314,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8259,7 +8259,7 @@
     "STEAM:Katanaut": {
       "name": "Katanaut",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 393,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8283,7 +8283,7 @@
     "STEAM:Audiosurf 2": {
       "name": "Audiosurf 2",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 405,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8295,7 +8295,7 @@
     "STEAM:WAKFU": {
       "name": "WAKFU",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 368,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8319,7 +8319,7 @@
     "STEAM:Windrose": {
       "name": "Windrose",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 350,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8331,7 +8331,7 @@
     "STEAM:FINAL FANTASY XVI": {
       "name": "FINAL FANTASY XVI",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 363,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8439,7 +8439,7 @@
     "STEAM:Oddworld: Stranger's Wrath HD": {
       "name": "Oddworld: Stranger's Wrath HD",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 343,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8451,7 +8451,7 @@
     "STEAM:Return to Castle Wolfenstein": {
       "name": "Return to Castle Wolfenstein",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 321,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8463,7 +8463,7 @@
     "STEAM:Black Myth: Wukong": {
       "name": "Black Myth: Wukong",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 361,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8475,7 +8475,7 @@
     "STEAM:EVE Online": {
       "name": "EVE Online",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 407,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8487,7 +8487,7 @@
     "STEAM:Bright Memory": {
       "name": "Bright Memory",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 380,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8511,7 +8511,7 @@
     "STEAM:Meowgic": {
       "name": "Meowgic",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 342,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8523,7 +8523,7 @@
     "STEAM:Life is Strange: Before the Storm Remastered": {
       "name": "Life is Strange: Before the Storm Remastered",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 402,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8535,7 +8535,7 @@
     "STEAM:ZONE OF THE ENDERS THE 2nd RUNNER : MARS / ANUBIS ZONE OF THE ENDERS : MARS": {
       "name": "ZONE OF THE ENDERS THE 2nd RUNNER : MARS / ANUBIS ZONE OF THE ENDERS : MARS",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 386,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8547,7 +8547,7 @@
     "STEAM:Tyr": {
       "name": "Tyr",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 396,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8691,7 +8691,7 @@
     "STEAM:Child of Light": {
       "name": "Child of Light",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 387,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8739,7 +8739,7 @@
     "STEAM:Tom Clancy's Rainbow Six Siege": {
       "name": "Tom Clancy's Rainbow Six Siege",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 366,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8799,7 +8799,7 @@
     "STEAM:GT Legends": {
       "name": "GT Legends",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 364,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8823,7 +8823,7 @@
     "STEAM:SlashZero Demo": {
       "name": "SlashZero Demo",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 408,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8838,7 +8838,7 @@
       "issue_number": null,
       "non_broken_streak": 0,
       "recovered_since": null,
-      "last_verdict": "BROKEN",
+      "last_verdict": "LIKELY_BROKEN",
       "last_seen": "2026-10-16",
       "ratings": 200,
       "one_star": 173,
@@ -8847,7 +8847,7 @@
     "EPIC:Sol Cesto": {
       "name": "Sol Cesto",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 18,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8859,7 +8859,7 @@
     "EPIC:Tomb Raider I-III Remastered Starring Lara Croft": {
       "name": "Tomb Raider I-III Remastered Starring Lara Croft",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 22,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8871,7 +8871,7 @@
     "GOG:The Witcher: Enhanced Edition": {
       "name": "The Witcher: Enhanced Edition",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 23,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8895,7 +8895,7 @@
     "EPIC:Fall Guys": {
       "name": "Fall Guys",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 32,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8907,7 +8907,7 @@
     "GOG:Heroes of Might and Magic® 3: Complete": {
       "name": "Heroes of Might and Magic® 3: Complete",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 51,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8919,7 +8919,7 @@
     "EPIC:Five Nights at Freddy's: Into the Pit": {
       "name": "Five Nights at Freddy's: Into the Pit",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 53,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8931,7 +8931,7 @@
     "GOG:Saints Row 2": {
       "name": "Saints Row 2",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 58,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -8950,7 +8950,7 @@
       "last_seen": "2026-10-16",
       "ratings": 114,
       "one_star": 76,
-      "users_rendered_pct": 43
+      "users_rendered_pct": 48
     },
     "GOG:Hollow Knight: Silksong": {
       "name": "Hollow Knight: Silksong",
@@ -8979,7 +8979,7 @@
     "GOG:DOOM (2016)": {
       "name": "DOOM (2016)",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 80,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9015,7 +9015,7 @@
     "GOG:Diablo + Hellfire": {
       "name": "Diablo + Hellfire",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 111,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9032,8 +9032,8 @@
       "recovered_since": null,
       "last_verdict": "LIKELY_BROKEN",
       "last_seen": "2026-10-16",
-      "ratings": 100,
-      "one_star": 51,
+      "ratings": 99,
+      "one_star": 50,
       "users_rendered_pct": null
     },
     "EPIC:Sable": {
@@ -9087,7 +9087,7 @@
     "GOG:Mafia: Definitive Edition": {
       "name": "Mafia: Definitive Edition",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 125,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9099,7 +9099,7 @@
     "EPIC:Alex Kidd in Miracle World DX": {
       "name": "Alex Kidd in Miracle World DX",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 127,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9130,12 +9130,12 @@
       "last_seen": "2026-10-16",
       "ratings": 88,
       "one_star": 44,
-      "users_rendered_pct": null
+      "users_rendered_pct": 30
     },
     "GOG:Fallout": {
       "name": "Fallout",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 133,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9147,7 +9147,7 @@
     "STEAM:Beat Saber": {
       "name": "Beat Saber",
       "store": "STEAM",
-      "issue_number": null,
+      "issue_number": 136,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9171,7 +9171,7 @@
     "EPIC:Wonder Boy The Dragons Trap": {
       "name": "Wonder Boy The Dragons Trap",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 142,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9219,10 +9219,10 @@
     "GOG:Grim Dawn": {
       "name": "Grim Dawn",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 147,
       "non_broken_streak": 0,
       "recovered_since": null,
-      "last_verdict": "LIKELY_BROKEN",
+      "last_verdict": "BROKEN",
       "last_seen": "2026-10-16",
       "ratings": 68,
       "one_star": 40,
@@ -9231,7 +9231,7 @@
     "EPIC:Death Stranding": {
       "name": "Death Stranding",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 151,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9243,7 +9243,7 @@
     "EPIC:Moonlighter": {
       "name": "Moonlighter",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 152,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9255,7 +9255,7 @@
     "GOG:The Witcher 2: Assassins of Kings Enhanced Edition": {
       "name": "The Witcher 2: Assassins of Kings Enhanced Edition",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 156,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9267,7 +9267,7 @@
     "GOG:STAR WARS™ Episode I: Racer": {
       "name": "STAR WARS™ Episode I: Racer",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 162,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9279,7 +9279,7 @@
     "GOG:Hotline Miami": {
       "name": "Hotline Miami",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 166,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9315,7 +9315,7 @@
     "GOG:Deus Ex™ GOTY Edition": {
       "name": "Deus Ex™ GOTY Edition",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 170,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9327,7 +9327,7 @@
     "GOG:CrossCode": {
       "name": "CrossCode",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 175,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9351,7 +9351,7 @@
     "EPIC:Beholder": {
       "name": "Beholder",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 184,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9363,7 +9363,7 @@
     "GOG:Baldur's Gate: Enhanced Edition": {
       "name": "Baldur's Gate: Enhanced Edition",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 183,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9435,7 +9435,7 @@
     "GOG:CARRION": {
       "name": "CARRION",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 213,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9471,7 +9471,7 @@
     "EPIC:Borderlands: The Pre-Sequel": {
       "name": "Borderlands: The Pre-Sequel",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 221,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9483,7 +9483,7 @@
     "EPIC:Turnip Boy Robs a Bank": {
       "name": "Turnip Boy Robs a Bank",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 222,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9495,7 +9495,7 @@
     "EPIC:Sonic Racing: CrossWorlds": {
       "name": "Sonic Racing: CrossWorlds",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 226,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9519,7 +9519,7 @@
     "EPIC:skate.™": {
       "name": "skate.™",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 230,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9555,7 +9555,7 @@
     "GOG:Mirror's Edge™": {
       "name": "Mirror's Edge™",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 235,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9567,7 +9567,7 @@
     "GOG:Singularity™": {
       "name": "Singularity™",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 247,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9591,7 +9591,7 @@
     "GOG:Resident Evil": {
       "name": "Resident Evil",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 265,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9615,7 +9615,7 @@
     "GOG:DOOM 3: BFG Edition": {
       "name": "DOOM 3: BFG Edition",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 269,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9639,7 +9639,7 @@
     "GOG:Jade Empire: Special Edition": {
       "name": "Jade Empire: Special Edition",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 276,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9651,7 +9651,7 @@
     "EPIC:Rayman Legends": {
       "name": "Rayman Legends",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 286,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9663,7 +9663,7 @@
     "EPIC:Watch Dogs": {
       "name": "Watch Dogs",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 289,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9675,7 +9675,7 @@
     "AMAZON:Agatha Knife": {
       "name": "Agatha Knife",
       "store": "AMAZON",
-      "issue_number": null,
+      "issue_number": 290,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9687,7 +9687,7 @@
     "EPIC:Pathway": {
       "name": "Pathway",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 298,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9699,7 +9699,7 @@
     "GOG:Sid Meier's Alpha Centauri™ Planetary Pack": {
       "name": "Sid Meier's Alpha Centauri™ Planetary Pack",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 302,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9735,7 +9735,7 @@
     "EPIC:Tony Hawk's™ Pro Skater™ 1 + 2": {
       "name": "Tony Hawk's™ Pro Skater™ 1 + 2",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 319,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9783,7 +9783,7 @@
     "EPIC:Genshin Impact": {
       "name": "Genshin Impact",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 326,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9795,7 +9795,7 @@
     "GOG:Dungeon Keeper™ 2": {
       "name": "Dungeon Keeper™ 2",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 328,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9807,7 +9807,7 @@
     "GOG:Beyond Good & Evil™": {
       "name": "Beyond Good & Evil™",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 330,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9819,7 +9819,7 @@
     "GOG:LEGO® Indiana Jones™: The Original Adventures": {
       "name": "LEGO® Indiana Jones™: The Original Adventures",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 349,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9843,7 +9843,7 @@
     "EPIC:Definitely Not Fried Chicken": {
       "name": "Definitely Not Fried Chicken",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 356,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9855,7 +9855,7 @@
     "GOG:Tyrian 2000": {
       "name": "Tyrian 2000",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 360,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9879,7 +9879,7 @@
     "EPIC:We Were Here Together": {
       "name": "We Were Here Together",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 374,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9891,7 +9891,7 @@
     "GOG:Grim Fandango Remastered": {
       "name": "Grim Fandango Remastered",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 375,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9903,7 +9903,7 @@
     "GOG:Yakuza 0": {
       "name": "Yakuza 0",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 378,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9915,7 +9915,7 @@
     "EPIC:Just Cause 4": {
       "name": "Just Cause 4",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 383,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9927,7 +9927,7 @@
     "GOG:Dorfromantik": {
       "name": "Dorfromantik",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 381,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9939,7 +9939,7 @@
     "GOG:Sapphire Safari": {
       "name": "Sapphire Safari",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 385,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9951,7 +9951,7 @@
     "EPIC:Deponia The Complete Journey": {
       "name": "Deponia The Complete Journey",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 389,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9963,7 +9963,7 @@
     "GOG:Clive Barker's Undying": {
       "name": "Clive Barker's Undying",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 388,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -9999,7 +9999,7 @@
     "GOG:Devil May Cry 4 Special Edition": {
       "name": "Devil May Cry 4 Special Edition",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 391,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -10011,7 +10011,7 @@
     "GOG:Fallout Classic": {
       "name": "Fallout Classic",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 392,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -10023,7 +10023,7 @@
     "EPIC:Watch Dogs 2": {
       "name": "Watch Dogs 2",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 399,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -10035,7 +10035,7 @@
     "EPIC:The Escapists": {
       "name": "The Escapists",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 398,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -10107,7 +10107,7 @@
     "GOG:Hitman 3: Contracts": {
       "name": "Hitman 3: Contracts",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 401,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -10119,7 +10119,7 @@
     "EPIC:Deadtime Defenders": {
       "name": "Deadtime Defenders",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 406,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -10191,7 +10191,7 @@
     "EPIC:RollerCoaster Tycoon® 3: Complete Edition": {
       "name": "RollerCoaster Tycoon® 3: Complete Edition",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 409,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -10203,7 +10203,7 @@
     "GOG:Treasure of Nadia": {
       "name": "Treasure of Nadia",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 413,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -10215,7 +10215,7 @@
     "GOG:The Witcher 3: Wild Hunt — Remastered": {
       "name": "The Witcher 3: Wild Hunt — Remastered",
       "store": "GOG",
-      "issue_number": null,
+      "issue_number": 412,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -10263,7 +10263,7 @@
     "EPIC:Darksiders Warmastered Edition": {
       "name": "Darksiders Warmastered Edition",
       "store": "EPIC",
-      "issue_number": null,
+      "issue_number": 415,
       "non_broken_streak": 0,
       "recovered_since": null,
       "last_verdict": "BROKEN",
@@ -10280,8 +10280,8 @@
       "recovered_since": null,
       "last_verdict": "LIKELY_BROKEN",
       "last_seen": "2026-10-16",
-      "ratings": 24,
-      "one_star": 13,
+      "ratings": 25,
+      "one_star": 14,
       "users_rendered_pct": null
     },
     "STEAM:Evoland": {
@@ -10403,8 +10403,56 @@
       "ratings": 20,
       "one_star": 10,
       "users_rendered_pct": null
+    },
+    "STEAM:Bayonetta": {
+      "name": "Bayonetta",
+      "store": "STEAM",
+      "issue_number": null,
+      "non_broken_streak": 0,
+      "recovered_since": null,
+      "last_verdict": "LIKELY_BROKEN",
+      "last_seen": "2026-10-16",
+      "ratings": 215,
+      "one_star": 88,
+      "users_rendered_pct": 58
+    },
+    "STEAM:Catherine Classic": {
+      "name": "Catherine Classic",
+      "store": "STEAM",
+      "issue_number": null,
+      "non_broken_streak": 0,
+      "recovered_since": null,
+      "last_verdict": "LIKELY_BROKEN",
+      "last_seen": "2026-10-16",
+      "ratings": 149,
+      "one_star": 73,
+      "users_rendered_pct": 55
+    },
+    "STEAM:Roguecraft DX": {
+      "name": "Roguecraft DX",
+      "store": "STEAM",
+      "issue_number": null,
+      "non_broken_streak": 0,
+      "recovered_since": null,
+      "last_verdict": "LIKELY_BROKEN",
+      "last_seen": "2026-10-16",
+      "ratings": 49,
+      "one_star": 16,
+      "users_rendered_pct": null
+    },
+    "STEAM:Allumeria": {
+      "name": "Allumeria",
+      "store": "STEAM",
+      "issue_number": 414,
+      "non_broken_streak": 0,
+      "recovered_since": null,
+      "last_verdict": "BROKEN",
+      "last_seen": "2026-10-16",
+      "ratings": 20,
+      "one_star": 14,
+      "users_rendered_pct": null
     }
   },
-  "last_sync": "2026-10-16T09:56:31Z",
+  "last_sync": "2026-10-16T10:58:26Z",
   "release": "1.3.0"
 }
