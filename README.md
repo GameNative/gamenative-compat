@@ -20,7 +20,11 @@ Every game that has enough data gets one verdict:
 
 The tables are ordered by the number of one-star ratings, which is the count of players who hit the problem, so the top rows are where a fix helps the most people; the `#` column is just the row rank. The exact thresholds are in the header of WORKLIST.md; they come from the data file so they are always the ones used for the current render.
 
-A game is **recovered** when it is no longer `BROKEN` or `LIKELY_BROKEN` on the current app release. Its row shows `[x]`, it moves to the "Recently recovered" section for 30 days, and its issue closes after it stays out of the broken lists for 7 nightly syncs in a row. If it breaks again, the issue reopens. Closing an issue by hand as "not planned" tells the sync to leave it closed for good; closing it as "completed" while the data still says broken gets it reopened the next night with a comment.
+A game is **recovered** when it is no longer `BROKEN` or `LIKELY_BROKEN` on the current app release. Its row shows `[x]`, it moves to the "Recently recovered" section for 30 days, and its issue closes after it stays out of the broken lists for 3 nightly syncs in a row. If it breaks again, the issue reopens. Closing an issue by hand as "not planned" tells the sync to leave it closed for good; closing it as "completed" while the data still says broken gets it reopened the next night with a comment.
+
+## How a game leaves the list
+
+The verdict is judged on the **last 14 days** of ratings once a game has 20 or more of them, so a fix shows up within days of shipping, not after months of old one-star ratings have aged out. A game with fewer than 20 recent ratings keeps its 90-day verdict; its one-star column says `(90d)` so you know the number is history, `(14d)` means it is current.
 
 ## Where the data comes from
 

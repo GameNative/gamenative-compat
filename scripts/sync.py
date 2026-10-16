@@ -21,7 +21,7 @@ DEFAULT_URL = "https://api.gamenative.app/api/compat-worklist"
 LABEL = "does-not-work"
 LABEL_COLOR = "d73a4a"
 LABEL_DESCRIPTION = "Game does not run in GameNative (auto-managed from the compat worklist)"
-CLOSE_AFTER_SYNCS = 7
+CLOSE_AFTER_SYNCS = 3
 RECENT_DAYS = 30
 MARKER_RE = re.compile(r"<!-- compat-worklist: (.+?) -->")
 
@@ -66,6 +66,15 @@ def md_escape(text):
 
 def pct(value):
     return "n/a" if value is None else f"{value}%"
+
+
+def one_star_cell(game):
+    recent = game.get("one_star_recent_pct")
+    if game.get("verdict_window") == "recent" and recent is not None:
+        return f"{recent}% (14d)"
+    if game.get("verdict_window") == "carried_over":
+        return f"{game['one_star_pct']}% (90d)"
+    return f"{game['one_star_pct']}%"
 
 
 def one_star_count(game):
@@ -174,7 +183,7 @@ def render_table(games, state_games, repo):
         number = entry.get("issue_number")
         issue = f"[#{number}]({issue_url(repo, number)})" if number else ""
         lines.append(
-            f"| {rank} | {box} | {md_escape(g['name'])} ({g['store']}) | {one_star_count(g)} | {g['ratings']} | {g['one_star_pct']}% | "
+            f"| {rank} | {box} | {md_escape(g['name'])} ({g['store']}) | {one_star_count(g)} | {g['ratings']} | {one_star_cell(g)} | "
             f"{reason or 'n/a'} | {pct(g.get('users_rendered_pct'))} | {issue} |"
         )
     return lines
@@ -289,7 +298,7 @@ def issue_body(game, worklist, repo):
         ("Verdict", game["verdict"]),
         ("Ratings", str(game["ratings"])),
         ("Devices that rated", str(game.get("devices", "n/a"))),
-        ("One-star ratings", f"{one_star_count(game)} ({game['one_star_pct']}%)"),
+        ("One-star ratings", f"{one_star_count(game)} ({one_star_cell(game)})"),
         ("One-star devices", pct(game.get("one_star_devices_pct"))),
         ("Top reason", reason),
         (f"Ratings on release {worklist.get('release')}", f"{game.get('ratings_recent', 'n/a')} ({game.get('one_star_recent', 'n/a')} one-star)"),
