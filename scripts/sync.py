@@ -68,11 +68,17 @@ def pct(value):
     return "n/a" if value is None else f"{value}%"
 
 
-def one_star_cell(game):
-    recent = game.get("one_star_recent_pct")
-    if game.get("verdict_window") == "recent" and recent is not None:
-        return f"{recent}% (14d)"
-    if game.get("verdict_window") == "carried_over":
+CURRENT_RELEASE = None
+
+
+def one_star_cell(game, release=None):
+    release = release or CURRENT_RELEASE
+    window = game.get("verdict_window")
+    if window == "release" and game.get("one_star_release_pct") is not None:
+        return f"{game['one_star_release_pct']}% ({release or 'release'})"
+    if window == "recent" and game.get("one_star_recent_pct") is not None:
+        return f"{game['one_star_recent_pct']}% (14d)"
+    if window == "carried_over":
         return f"{game['one_star_pct']}% (90d)"
     return f"{game['one_star_pct']}%"
 
@@ -552,6 +558,8 @@ def main():
     if fetched is not None:
         save_json(WORKLIST_PATH, fetched)
         worklist = fetched
+        global CURRENT_RELEASE
+        CURRENT_RELEASE = worklist.get('release')
     else:
         worklist = load_json(WORKLIST_PATH, None)
         if worklist is None:

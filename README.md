@@ -24,7 +24,7 @@ A game is **recovered** when it is no longer `BROKEN` or `LIKELY_BROKEN` on the 
 
 ## How a game leaves the list
 
-The verdict is judged on the **last 14 days** of ratings once a game has 20 or more of them, so a fix shows up within days of shipping, not after months of old one-star ratings have aged out. A game with fewer than 20 recent ratings keeps its 90-day verdict; its one-star column says `(90d)` so you know the number is history, `(14d)` means it is current.
+The verdict is judged on ratings from the **current app release** once a game has 20 of them, so a fix shipped in a release shows up as soon as players on that release rate it. With fewer, the last 14 days are used when they hold 20 ratings, which covers fixes shipped without an app release. Only then does the 90-day history decide. The one-star column says which window judged the row: the release number, `(14d)`, or `(90d)` for history.
 
 ## Where the data comes from
 
