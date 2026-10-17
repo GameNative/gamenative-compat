@@ -24,6 +24,7 @@ LABEL_DESCRIPTION = "Game does not run in GameNative (auto-managed from the comp
 CLOSE_AFTER_SYNCS = 3
 RECENT_DAYS = 30
 MARKER_RE = re.compile(r"<!-- compat-worklist: (.+?) -->")
+ROW_RE = re.compile(r"^\|\s*\d+\s*\|\s*\[( |x|X)\][^|]*\|\s*(.+?) \(([A-Z]+)\)\s*\|")
 
 REASONS = {
     "does_not_open": "Does not open",
@@ -134,6 +135,61 @@ def is_broken_ish(verdict):
     return verdict in ("BROKEN", "LIKELY_BROKEN")
 
 
+def new_entry(game):
+    return {
+        "name": game["name"],
+        "store": game["store"],
+        "issue_number": None,
+        "non_broken_streak": 0,
+        "recovered_since": None,
+        "last_verdict": None,
+    }
+
+
+def read_hand_marks(path):
+    """Checkbox state per game key in the previously rendered WORKLIST.md, broken sections only."""
+    if not path.exists():
+        return {}
+    headings = {heading for _, heading, _ in SECTIONS}
+    marks = {}
+    in_section = False
+    for line in path.read_text(encoding="utf-8").splitlines():
+        if line.startswith("## "):
+            in_section = re.sub(r" \(\d+\)$", "", line[3:].strip()) in headings
+            continue
+        if not in_section:
+            continue
+        m = ROW_RE.match(line)
+        if not m:
+            continue
+        name = m.group(2).replace("\\|", "|")
+        marks[f"{m.group(3)}:{name}"] = m.group(1).lower() == "x"
+    return marks
+
+
+def apply_hand_marks(worklist, state, marks):
+    games = state.setdefault("games", {})
+    marked = cleared = 0
+    for game in worklist["games"]:
+        key = game_key(game)
+        if key not in marks:
+            continue
+        entry = games.get(key)
+        if marks[key]:
+            if game.get("recovered"):
+                continue
+            if entry is None:
+                entry = games[key] = new_entry(game)
+            if not entry.get("fixed_by_hand"):
+                entry["fixed_by_hand"] = today()
+                marked += 1
+        elif entry is not None and entry.get("fixed_by_hand"):
+            entry["fixed_by_hand"] = None
+            cleared += 1
+    if marked or cleared:
+        log(f"hand marks: {marked} newly ticked, {cleared} unticked")
+
+
 def update_state(worklist, state):
     games = state.setdefault("games", {})
     for game in worklist["games"]:
@@ -143,18 +199,13 @@ def update_state(worklist, state):
         if entry is None:
             if not is_broken_ish(verdict):
                 continue
-            entry = games[key] = {
-                "name": game["name"],
-                "store": game["store"],
-                "issue_number": None,
-                "non_broken_streak": 0,
-                "recovered_since": None,
-                "last_verdict": None,
-            }
+            entry = games[key] = new_entry(game)
         previous = entry.get("last_verdict")
         if is_broken_ish(verdict):
             entry["non_broken_streak"] = 0
             entry["recovered_since"] = None
+            if previous is not None and not is_broken_ish(previous):
+                entry["fixed_by_hand"] = None
         else:
             entry["non_broken_streak"] = entry.get("non_broken_streak", 0) + 1
             if entry.get("recovered_since") is None and (is_broken_ish(previous) or game.get("recovered")):
@@ -181,11 +232,16 @@ def render_table(games, state_games, repo):
         "|---:|---|---|---:|---:|---:|---|---:|---|",
     ]
     for rank, g in enumerate(sorted(games, key=sort_key), 1):
-        box = "[x]" if g.get("recovered") else "[ ]"
+        entry = state_games.get(game_key(g)) or {}
+        if g.get("recovered"):
+            box = "[x]"
+        elif entry.get("fixed_by_hand"):
+            box = f"[x] {entry['fixed_by_hand']}"
+        else:
+            box = "[ ]"
         reason = humanise_reason(g.get("top_reason"))
         if reason and g.get("reason_pct") is not None:
             reason = f"{reason} ({g['reason_pct']}%)"
-        entry = state_games.get(game_key(g)) or {}
         number = entry.get("issue_number")
         issue = f"[#{number}]({issue_url(repo, number)})" if number else ""
         lines.append(
@@ -210,7 +266,9 @@ def render_markdown(worklist, state, repo):
     out.append(f"Generated: `{worklist.get('generated_at')}` · App release: `{worklist.get('release')}` · "
                f"Ratings since: `{window.get('ratings_since')}` · Telemetry window: `{window.get('telemetry_days')}` days on `{window.get('gpu')}`")
     out.append("")
-    out.append("This file is rewritten every night. Do not edit it by hand. See the [README](README.md) for how to read it and how to help.")
+    out.append("This file is rewritten every night. The one hand edit it keeps is the checkbox: change `[ ]` to `[x]` on a row once a fix has shipped, "
+               "and the sync remembers it (with the date) until the data agrees and the game leaves the list. Change it back to `[ ]` to undo. "
+               "See the [README](README.md) for how to read it and how to help.")
     out.append("")
     out.append("## How a game lands here")
     out.append("")
@@ -567,6 +625,7 @@ def main():
         log(f"using committed {WORKLIST_PATH.relative_to(ROOT)} ({len(worklist['games'])} games, generated {worklist.get('generated_at')})")
 
     state = load_json(STATE_PATH, {"games": {}})
+    apply_hand_marks(worklist, state, read_hand_marks(MARKDOWN_PATH))
     update_state(worklist, state)
 
     if not args.no_issues:
