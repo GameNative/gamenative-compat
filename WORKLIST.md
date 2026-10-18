@@ -2,7 +2,7 @@
 
 Generated: `2026-10-18T04:15:14.786Z` · App release: `1.3.0` · Ratings since: `2026-07-20T04:15:14.786Z` · Telemetry window: `21` days on `Adreno + Turnip`
 
-This file is rewritten every night. Do not edit it by hand. See the [README](README.md) for how to read it and how to help.
+This file is rewritten every night. To mark a game as fixed, tick its box in the checklist issue linked under each section (or change `[ ]` to `[x]` on its row here). The sync remembers the tick with its date until the data agrees and the game leaves the list. Untick to undo. See the [README](README.md) for how to read it and how to help.
 
 ## How a game lands here
 
@@ -26,20 +26,20 @@ This file is rewritten every night. Do not edit it by hand. See the [README](REA
 
 ## Does not work (380)
 
-Open issues track these. Pick one and fix it.
+Open issues track these. Pick one and fix it. Tick games off in the [checklist](https://github.com/GameNative/gamenative-compat/issues/430).
 
 | # | | Game | One-star ratings | Ratings | One-star | Top reason | Users rendered | Issue |
 |---:|---|---|---:|---:|---:|---|---:|---|
-| 1 | [x] | Project Zomboid (STEAM) | 683 | 732 | 94% (14d) | Does not open (68%) | 35% | [#1](https://github.com/GameNative/gamenative-compat/issues/1) |
+| 1 | [x] 2026-10-18 | Project Zomboid (STEAM) | 683 | 732 | 94% (14d) | Does not open (68%) | 35% | [#1](https://github.com/GameNative/gamenative-compat/issues/1) |
 | 2 | [ ] | The Elder Scrolls IV: Oblivion Game of the Year Edition (2009) (STEAM) | 292 | 330 | 86% (14d) | Does not open (88%) | 59% | [#2](https://github.com/GameNative/gamenative-compat/issues/2) |
-| 3 | [x] | Just Cause 2 (STEAM) | 273 | 290 | 97% (14d) | Does not open (75%) | 15% | [#3](https://github.com/GameNative/gamenative-compat/issues/3) |
-| 4 | [x] | Alan Wake (STEAM) | 257 | 266 | 98% (14d) | Does not open (88%) | 11% | [#5](https://github.com/GameNative/gamenative-compat/issues/5) |
-| 5 | [x] | Call of Duty: Black Ops (STEAM) | 241 | 250 | 96% (90d) | Does not open (76%) | 17% | [#6](https://github.com/GameNative/gamenative-compat/issues/6) |
+| 3 | [x] 2026-10-18 | Just Cause 2 (STEAM) | 273 | 290 | 97% (14d) | Does not open (75%) | 15% | [#3](https://github.com/GameNative/gamenative-compat/issues/3) |
+| 4 | [x] 2026-10-18 | Alan Wake (STEAM) | 257 | 266 | 98% (14d) | Does not open (88%) | 11% | [#5](https://github.com/GameNative/gamenative-compat/issues/5) |
+| 5 | [x] 2026-10-18 | Call of Duty: Black Ops (STEAM) | 241 | 250 | 96% (90d) | Does not open (76%) | 17% | [#6](https://github.com/GameNative/gamenative-compat/issues/6) |
 | 6 | [ ] | skate. (STEAM) | 228 | 242 | 97% (14d) | Does not open (81%) | 28% | [#7](https://github.com/GameNative/gamenative-compat/issues/7) |
-| 7 | [x] | Spelunky 2 (STEAM) | 227 | 231 | 94% (14d) | Does not open (70%) | 16% | [#8](https://github.com/GameNative/gamenative-compat/issues/8) |
+| 7 | [x] 2026-10-18 | Spelunky 2 (STEAM) | 227 | 231 | 94% (14d) | Does not open (70%) | 16% | [#8](https://github.com/GameNative/gamenative-compat/issues/8) |
 | 8 | [ ] | DRAGON BALL FighterZ (STEAM) | 221 | 251 | 83% (14d) | Does not open (87%) | 59% | [#9](https://github.com/GameNative/gamenative-compat/issues/9) |
 | 9 | [ ] | Counter-Strike 2 (STEAM) | 213 | 306 | 81% (14d) | Does not open (58%) | 39% | [#10](https://github.com/GameNative/gamenative-compat/issues/10) |
-| 10 | [x] | Sid Meier's Civilization V (STEAM) | 212 | 224 | 97% (14d) | Does not open (77%) | n/a | [#11](https://github.com/GameNative/gamenative-compat/issues/11) |
+| 10 | [x] 2026-10-18 | Sid Meier's Civilization V (STEAM) | 212 | 224 | 97% (14d) | Does not open (77%) | n/a | [#11](https://github.com/GameNative/gamenative-compat/issues/11) |
 | 11 | [ ] | Necesse (STEAM) | 189 | 203 | 93% (90d) | Does not open (81%) | 46% | [#12](https://github.com/GameNative/gamenative-compat/issues/12) |
 | 12 | [ ] | Prototype (STEAM) | 180 | 239 | 86% (14d) | Does not open (75%) | 50% | [#13](https://github.com/GameNative/gamenative-compat/issues/13) |
 | 13 | [ ] | Counter-Strike (STEAM) | 171 | 219 | 85% (14d) | Does not open (78%) | 59% | [#14](https://github.com/GameNative/gamenative-compat/issues/14) |
@@ -53,7 +53,7 @@ Open issues track these. Pick one and fix it.
 | 21 | [ ] | Tomb Raider I-III Remastered Starring Lara Croft (EPIC) | 119 | 151 | 79% (90d) | Does not open (78%) | 42% | [#22](https://github.com/GameNative/gamenative-compat/issues/22) |
 | 22 | [ ] | Minecraft Dungeons II (STEAM) | 118 | 131 | 80% (14d) | Does not open (82%) | 58% | [#418](https://github.com/GameNative/gamenative-compat/issues/418) |
 | 23 | [ ] | Call of Duty: Black Ops II (STEAM) | 115 | 147 | 78% (90d) | Does not open (77%) | 10% | [#24](https://github.com/GameNative/gamenative-compat/issues/24) |
-| 24 | [x] | Age of Empires II: Definitive Edition (STEAM) | 111 | 123 | 77% (14d) | No graphics (61%) | 50% | [#26](https://github.com/GameNative/gamenative-compat/issues/26) |
+| 24 | [x] 2026-10-18 | Age of Empires II: Definitive Edition (STEAM) | 111 | 123 | 77% (14d) | No graphics (61%) | 50% | [#26](https://github.com/GameNative/gamenative-compat/issues/26) |
 | 25 | [ ] | The Witcher: Enhanced Edition (GOG) | 111 | 122 | 91% (90d) | Does not open (79%) | 10% | [#23](https://github.com/GameNative/gamenative-compat/issues/23) |
 | 26 | [ ] | GRID 2 (STEAM) | 110 | 114 | 96% (90d) | Does not open (69%) | n/a | [#25](https://github.com/GameNative/gamenative-compat/issues/25) |
 | 27 | [ ] | Dust: An Elysian Tail (STEAM) | 109 | 113 | 96% (90d) | Does not open (71%) | 7% | [#28](https://github.com/GameNative/gamenative-compat/issues/28) |
@@ -91,7 +91,7 @@ Open issues track these. Pick one and fix it.
 | 59 | [ ] | GRID (STEAM) | 70 | 86 | 81% (90d) | Does not open (57%) | n/a | [#67](https://github.com/GameNative/gamenative-compat/issues/67) |
 | 60 | [ ] | Metro 2033 (STEAM) | 70 | 79 | 89% (90d) | Does not open (62%) | n/a | [#63](https://github.com/GameNative/gamenative-compat/issues/63) |
 | 61 | [ ] | Call of Duty: World at War (STEAM) | 68 | 92 | 74% (90d) | Does not open (41%) | 57% | [#66](https://github.com/GameNative/gamenative-compat/issues/66) |
-| 62 | [x] | Diablo® IV (STEAM) | 68 | 80 | 85% (90d) | Does not open (62%) | n/a | [#65](https://github.com/GameNative/gamenative-compat/issues/65) |
+| 62 | [x] 2026-10-18 | Diablo® IV (STEAM) | 68 | 80 | 85% (90d) | Does not open (62%) | n/a | [#65](https://github.com/GameNative/gamenative-compat/issues/65) |
 | 63 | [ ] | Ghost Trick: Phantom Detective (STEAM) | 64 | 64 | 100% (90d) | No graphics (56%) | 7% | [#72](https://github.com/GameNative/gamenative-compat/issues/72) |
 | 64 | [ ] | tModLoader (STEAM) | 63 | 72 | 88% (90d) | Does not open (86%) | n/a | [#73](https://github.com/GameNative/gamenative-compat/issues/73) |
 | 65 | [ ] | DOOM 3 (STEAM) | 63 | 71 | 89% (90d) | Does not open (90%) | n/a | [#78](https://github.com/GameNative/gamenative-compat/issues/78) |
@@ -413,7 +413,7 @@ Open issues track these. Pick one and fix it.
 
 ## Probably does not work (217)
 
-Fewer one-star ratings than the list above, or a thin sample. Needs confirmation on a device before it gets an issue.
+Fewer one-star ratings than the list above, or a thin sample. Needs confirmation on a device before it gets an issue. Tick games off in the [checklist](https://github.com/GameNative/gamenative-compat/issues/431).
 
 | # | | Game | One-star ratings | Ratings | One-star | Top reason | Users rendered | Issue |
 |---:|---|---|---:|---:|---:|---|---:|---|
@@ -637,7 +637,7 @@ Fewer one-star ratings than the list above, or a thin sample. Needs confirmation
 
 ## Works, but the first launch usually fails (212)
 
-Most users get a frame on screen eventually. The first run is the problem: a redistributable, a launcher, a login or a config change.
+Most users get a frame on screen eventually. The first run is the problem: a redistributable, a launcher, a login or a config change. Tick games off in the [checklist](https://github.com/GameNative/gamenative-compat/issues/432).
 
 | # | | Game | One-star ratings | Ratings | One-star | Top reason | Users rendered | Issue |
 |---:|---|---|---:|---:|---:|---|---:|---|
