@@ -47,7 +47,7 @@ The two signals are combined into the verdict by the API that produces `data/wor
 1. Pick an issue from the [`does-not-work`](../../issues?q=is%3Aopen+label%3Adoes-not-work) list. The metrics table in the issue tells you how many users it affects and what they report.
 2. Work out why it fails. Most fixes land in the app, in the Proton/Wine fork, in the GPU driver wrappers or in the per-game config that ships with the app.
 3. Open a pull request in the relevant repository and link it from the issue.
-4. Once the fix ships, tick the box: edit WORKLIST.md and change `[ ]` to `[x]` on the game's row. The nightly sync keeps the tick and the date it was set, so the row reads as "fixed, waiting for the data" until users start rendering the game. Then the game moves to "Recently recovered" and the issue closes a week later with a comment. You do not need to close anything by hand. Change the box back to `[ ]` if the fix did not take; the sync also clears it if the game recovers and then breaks again.
+4. Once the fix ships, tick the game off in the [checklist issues](../../issues?q=label%3Achecklist): one per section, with a clickable box per game. (Changing `[ ]` to `[x]` on the row in WORKLIST.md does the same.) The nightly sync keeps the tick and the date it was set, so the row reads as "fixed, waiting for the data" until users start rendering the game. Then the game moves to "Recently recovered" and the issue closes a week later with a comment. You do not need to close anything by hand. Change the box back to `[ ]` if the fix did not take; the sync also clears it if the game recovers and then breaks again.
 
 Comments on the issues are kept. The bot only rewrites the metrics table in the issue body.
 

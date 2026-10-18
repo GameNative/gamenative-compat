@@ -25,6 +25,12 @@ CLOSE_AFTER_SYNCS = 3
 RECENT_DAYS = 30
 MARKER_RE = re.compile(r"<!-- compat-worklist: (.+?) -->")
 ROW_RE = re.compile(r"^\|\s*\d+\s*\|\s*\[( |x|X)\][^|]*\|\s*(.+?) \(([A-Z]+)\)\s*\|")
+CHECKLIST_LABEL = "checklist"
+CHECKLIST_LABEL_COLOR = "0e8a16"
+CHECKLIST_LABEL_DESCRIPTION = "Tick a game off here once a fix has shipped (auto-managed from the compat worklist)"
+CHECKLIST_MARKER_RE = re.compile(r"<!-- compat-checklist: ([A-Z_]+) -->")
+CHECKLIST_ITEM_RE = re.compile(r"^- \[( |x|X)\] \*\*(.+?)\*\* \(([A-Z]+)\)")
+ISSUE_BODY_LIMIT = 60000
 
 REASONS = {
     "does_not_open": "Does not open",
@@ -190,6 +196,62 @@ def apply_hand_marks(worklist, state, marks):
         log(f"hand marks: {marked} newly ticked, {cleared} unticked")
 
 
+def checklist_marker(verdict):
+    return f"<!-- compat-checklist: {verdict} -->"
+
+
+def checklist_title(heading):
+    return f"Checklist: {heading}"
+
+
+def read_checklist_marks(body):
+    marks = {}
+    for line in (body or "").replace("\r\n", "\n").splitlines():
+        m = CHECKLIST_ITEM_RE.match(line)
+        if m:
+            marks[f"{m.group(3)}:{m.group(2).replace("\\*", "*")}"] = m.group(1).lower() == "x"
+    return marks
+
+
+def checklist_body(verdict, heading, blurb, games, state, worklist, repo):
+    state_games = state.get("games", {})
+    worklist_link = f"https://github.com/{repo}/blob/main/WORKLIST.md" if repo else "WORKLIST.md"
+    lines = [
+        f"Every game on the \"{heading}\" list in the [worklist]({worklist_link}), most affected players first. {blurb}",
+        "",
+        "**Tick a box once a fix has shipped.** The nightly sync keeps the tick, shows it in WORKLIST.md with the date, and clears it on its own "
+        "if the game recovers and then breaks again. Untick to undo. Games leave this list when the data says they work, not when they are ticked. "
+        "Everything else in this issue is rewritten every night.",
+        "",
+    ]
+    items = []
+    for g in sorted(games, key=sort_key):
+        entry = state_games.get(game_key(g)) or {}
+        box = "x" if entry.get("fixed_by_hand") else " "
+        name = g["name"].replace("*", "\\*")
+        bits = [f"{one_star_count(g)} one-star of {g['ratings']}", f"{pct(g.get('users_rendered_pct'))} rendered"]
+        reason = humanise_reason(g.get("top_reason"))
+        if reason:
+            bits.append(reason.lower())
+        number = entry.get("issue_number")
+        if number:
+            bits.append(f"#{number}")
+        items.append(f"- [{box}] **{name}** ({g['store']}) · " + " · ".join(bits))
+    budget = ISSUE_BODY_LIMIT - sum(len(l) + 1 for l in lines) - 200
+    kept = []
+    used = 0
+    for item in items:
+        if used + len(item) + 1 > budget:
+            break
+        kept.append(item)
+        used += len(item) + 1
+    lines += kept
+    if len(kept) < len(items):
+        lines += ["", f"{len(items) - len(kept)} more games did not fit in this issue. They are in the worklist."]
+    lines += ["", f"Data as of `{worklist.get('generated_at')}`, app release {worklist.get('release')}.", "", checklist_marker(verdict)]
+    return "\n".join(lines)
+
+
 def update_state(worklist, state):
     games = state.setdefault("games", {})
     for game in worklist["games"]:
@@ -266,9 +328,9 @@ def render_markdown(worklist, state, repo):
     out.append(f"Generated: `{worklist.get('generated_at')}` · App release: `{worklist.get('release')}` · "
                f"Ratings since: `{window.get('ratings_since')}` · Telemetry window: `{window.get('telemetry_days')}` days on `{window.get('gpu')}`")
     out.append("")
-    out.append("This file is rewritten every night. The one hand edit it keeps is the checkbox: change `[ ]` to `[x]` on a row once a fix has shipped, "
-               "and the sync remembers it (with the date) until the data agrees and the game leaves the list. Change it back to `[ ]` to undo. "
-               "See the [README](README.md) for how to read it and how to help.")
+    out.append("This file is rewritten every night. To mark a game as fixed, tick its box in the checklist issue linked under each section "
+               "(or change `[ ]` to `[x]` on its row here). The sync remembers the tick with its date until the data agrees and the game leaves the list. "
+               "Untick to undo. See the [README](README.md) for how to read it and how to help.")
     out.append("")
     out.append("## How a game lands here")
     out.append("")
@@ -289,11 +351,16 @@ def render_markdown(worklist, state, repo):
     out.append(f"| Total | {len(games)} |")
     out.append("")
 
+    checklists = state.get("checklists", {})
     for verdict, heading, blurb in SECTIONS:
         subset = [g for g in games if g["verdict"] == verdict]
         out.append(f"## {heading} ({len(subset)})")
         out.append("")
-        out.append(blurb)
+        number = checklists.get(verdict)
+        if number:
+            out.append(f"{blurb} Tick games off in the [checklist]({issue_url(repo, number)}).")
+        else:
+            out.append(blurb)
         out.append("")
         if subset:
             out.extend(render_table(subset, state_games, repo))
@@ -457,6 +524,40 @@ class GitHub:
         self.write("POST", f"/repos/{self.repo}/labels", {"name": LABEL, "color": LABEL_COLOR, "description": LABEL_DESCRIPTION})
         log(f"github: created label '{LABEL}'")
 
+    def ensure_checklist_label(self):
+        try:
+            self.get(f"/repos/{self.repo}/labels/{urllib.parse.quote(CHECKLIST_LABEL)}")
+            return
+        except RuntimeError as e:
+            if "HTTP 404" not in str(e):
+                raise
+        if self.dry_run:
+            log(f"[dry-run] would create label '{CHECKLIST_LABEL}'")
+            return
+        self.write("POST", f"/repos/{self.repo}/labels", {"name": CHECKLIST_LABEL, "color": CHECKLIST_LABEL_COLOR, "description": CHECKLIST_LABEL_DESCRIPTION})
+        log(f"github: created label '{CHECKLIST_LABEL}'")
+
+    def list_checklist_issues(self):
+        issues = {}
+        page = 1
+        while True:
+            batch = self.get(f"/repos/{self.repo}/issues", {"labels": CHECKLIST_LABEL, "state": "all", "per_page": 100, "page": page})
+            if not batch:
+                break
+            for issue in batch:
+                if "pull_request" in issue:
+                    continue
+                m = CHECKLIST_MARKER_RE.search(issue.get("body") or "")
+                if m and (m.group(1) not in issues or issue["number"] > issues[m.group(1)]["number"]):
+                    issues[m.group(1)] = issue
+            if len(batch) < 100:
+                break
+            page += 1
+        return issues
+
+    def create_checklist_issue(self, title, body):
+        return self.write("POST", f"/repos/{self.repo}/issues", {"title": title, "body": body, "labels": [CHECKLIST_LABEL]})
+
     def list_labelled_issues(self):
         issues = {}
         page = 1
@@ -486,6 +587,68 @@ class GitHub:
 
     def comment(self, number, text):
         return self.write("POST", f"/repos/{self.repo}/issues/{number}/comments", {"body": text})
+
+
+def github_client(args):
+    token = os.environ.get("GITHUB_TOKEN")
+    repo = os.environ.get("GITHUB_REPOSITORY")
+    if not token or not repo:
+        return None
+    return GitHub(token, repo, args.dry_run)
+
+
+def read_checklist_issue_marks(gh, state):
+    """Ticks from the checklist issues, so a click in GitHub counts the same as an edit to WORKLIST.md."""
+    if gh is None:
+        return {}
+    gh.ensure_checklist_label()
+    existing = gh.list_checklist_issues()
+    checklists = state.setdefault("checklists", {})
+    marks = {}
+    for verdict, issue in existing.items():
+        checklists[verdict] = issue["number"]
+        marks.update(read_checklist_marks(issue.get("body")))
+    log(f"checklists: found {len(existing)} checklist issues, {sum(marks.values())} ticked items")
+    return marks
+
+
+def sync_checklists(gh, worklist, state, args):
+    if gh is None:
+        if args.dry_run:
+            log("[dry-run] no GITHUB_TOKEN/GITHUB_REPOSITORY; skipping checklist issues")
+        else:
+            log("checklists: GITHUB_TOKEN or GITHUB_REPOSITORY missing; skipping")
+        return
+    existing = gh.list_checklist_issues()
+    checklists = state.setdefault("checklists", {})
+    for verdict, heading, blurb in SECTIONS:
+        games = [g for g in worklist["games"] if g["verdict"] == verdict]
+        title = checklist_title(heading)
+        body = checklist_body(verdict, heading, blurb, games, state, worklist, gh.repo)
+        issue = existing.get(verdict)
+        if issue is None:
+            if args.dry_run:
+                log(f"[dry-run] create checklist: {title} ({len(games)} items)")
+                continue
+            created = gh.create_checklist_issue(title, body)
+            checklists[verdict] = created["number"]
+            log(f"checklists: created #{created['number']} {title}")
+            continue
+        number = issue["number"]
+        checklists[verdict] = number
+        current = (issue.get("body") or "").replace("\r\n", "\n").rstrip()
+        fields = {}
+        if current != body.rstrip() or issue.get("title") != title:
+            fields.update(title=title, body=body)
+        if issue["state"] != "open":
+            fields["state"] = "open"
+        if not fields:
+            continue
+        if args.dry_run:
+            log(f"[dry-run] update checklist #{number}: {title} ({len(games)} items)")
+        else:
+            gh.update_issue(number, **fields)
+            log(f"checklists: updated #{number} {title}")
 
 
 def manage_issues(worklist, state, args):
@@ -625,11 +788,14 @@ def main():
         log(f"using committed {WORKLIST_PATH.relative_to(ROOT)} ({len(worklist['games'])} games, generated {worklist.get('generated_at')})")
 
     state = load_json(STATE_PATH, {"games": {}})
+    gh = None if args.no_issues else github_client(args)
     apply_hand_marks(worklist, state, read_hand_marks(MARKDOWN_PATH))
+    apply_hand_marks(worklist, state, read_checklist_issue_marks(gh, state))
     update_state(worklist, state)
 
     if not args.no_issues:
         manage_issues(worklist, state, args)
+        sync_checklists(gh, worklist, state, args)
     else:
         log("issues: skipped (--no-issues)")
 
