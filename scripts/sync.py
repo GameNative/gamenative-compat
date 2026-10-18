@@ -209,7 +209,8 @@ def read_checklist_marks(body):
     for line in (body or "").replace("\r\n", "\n").splitlines():
         m = CHECKLIST_ITEM_RE.match(line)
         if m:
-            marks[f"{m.group(3)}:{m.group(2).replace("\\*", "*")}"] = m.group(1).lower() == "x"
+            name = m.group(2).replace("\\*", "*")
+            marks[f"{m.group(3)}:{name}"] = m.group(1).lower() == "x"
     return marks
 
 
