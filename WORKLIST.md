@@ -31,7 +31,7 @@ Open issues track these. Pick one and fix it. Tick games off in the [checklist](
 | # | | Game | One-star ratings | Ratings | One-star | Top reason | Users rendered | Issue |
 |---:|---|---|---:|---:|---:|---|---:|---|
 | 1 | [x] 2026-10-18 | Project Zomboid (STEAM) | 683 | 732 | 94% (14d) | Does not open (68%) | 35% | [#1](https://github.com/GameNative/gamenative-compat/issues/1) |
-| 2 | [ ] | The Elder Scrolls IV: Oblivion Game of the Year Edition (2009) (STEAM) | 292 | 330 | 86% (14d) | Does not open (88%) | 59% | [#2](https://github.com/GameNative/gamenative-compat/issues/2) |
+| 2 | [x] | The Elder Scrolls IV: Oblivion Game of the Year Edition (2009) (STEAM) | 292 | 330 | 86% (14d) | Does not open (88%) | 59% | [#2](https://github.com/GameNative/gamenative-compat/issues/2) |
 | 3 | [x] 2026-10-18 | Just Cause 2 (STEAM) | 273 | 290 | 97% (14d) | Does not open (75%) | 15% | [#3](https://github.com/GameNative/gamenative-compat/issues/3) |
 | 4 | [x] 2026-10-18 | Alan Wake (STEAM) | 257 | 266 | 98% (14d) | Does not open (88%) | 11% | [#5](https://github.com/GameNative/gamenative-compat/issues/5) |
 | 5 | [x] 2026-10-18 | Call of Duty: Black Ops (STEAM) | 241 | 250 | 96% (90d) | Does not open (76%) | 17% | [#6](https://github.com/GameNative/gamenative-compat/issues/6) |
