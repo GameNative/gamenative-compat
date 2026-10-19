@@ -37,7 +37,7 @@ Open issues track these. Pick one and fix it. Tick games off in the [checklist](
 | 5 | [x] 2026-10-18 | Call of Duty: Black Ops (STEAM) | 241 | 250 | 96% (90d) | Does not open (76%) | 17% | [#6](https://github.com/GameNative/gamenative-compat/issues/6) |
 | 6 | [ ] | skate. (STEAM) | 228 | 242 | 97% (14d) | Does not open (81%) | 28% | [#7](https://github.com/GameNative/gamenative-compat/issues/7) |
 | 7 | [x] 2026-10-18 | Spelunky 2 (STEAM) | 227 | 231 | 94% (14d) | Does not open (70%) | 16% | [#8](https://github.com/GameNative/gamenative-compat/issues/8) |
-| 8 | [ ] | DRAGON BALL FighterZ (STEAM) | 221 | 251 | 83% (14d) | Does not open (87%) | 59% | [#9](https://github.com/GameNative/gamenative-compat/issues/9) |
+| 8 | [x] | DRAGON BALL FighterZ (STEAM) | 221 | 251 | 83% (14d) | Does not open (87%) | 59% | [#9](https://github.com/GameNative/gamenative-compat/issues/9) |
 | 9 | [ ] | Counter-Strike 2 (STEAM) | 213 | 306 | 81% (14d) | Does not open (58%) | 39% | [#10](https://github.com/GameNative/gamenative-compat/issues/10) |
 | 10 | [x] 2026-10-18 | Sid Meier's Civilization V (STEAM) | 212 | 224 | 97% (14d) | Does not open (77%) | n/a | [#11](https://github.com/GameNative/gamenative-compat/issues/11) |
 | 11 | [ ] | Necesse (STEAM) | 189 | 203 | 93% (90d) | Does not open (81%) | 46% | [#12](https://github.com/GameNative/gamenative-compat/issues/12) |
