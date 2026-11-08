@@ -20,17 +20,17 @@ Every game that has enough data gets one verdict:
 
 The tables are ordered by the number of one-star ratings, which is the count of players who hit the problem, so the top rows are where a fix helps the most people; the `#` column is just the row rank. The exact thresholds are in the header of WORKLIST.md; they come from the data file so they are always the ones used for the current render.
 
-A game is **recovered** when it is no longer `BROKEN` or `LIKELY_BROKEN` on the current app release. Its row shows `[x]`, it moves to the "Recently recovered" section for 30 days, and its issue closes after it stays out of the broken lists for 3 nightly syncs in a row. If it breaks again, the issue reopens. Closing an issue by hand as "not planned" tells the sync to leave it closed for good; closing it as "completed" while the data still says broken gets it reopened the next night with a comment.
+A game is **recovered** when it is no longer `BROKEN` or `LIKELY_BROKEN`. Its row shows `[x]`, it moves to the "Recently recovered" section for 30 days, and its issue closes after it stays out of the broken lists for 3 nightly syncs in a row. If it breaks again, the issue reopens. Closing an issue by hand as "not planned" tells the sync to leave it closed for good; closing it as "completed" while the data still says broken gets it reopened the next night with a comment.
 
 ## How a game leaves the list
 
-The verdict is judged on ratings from the **current app release** once a game has 20 of them, so a fix shipped in a release shows up as soon as players on that release rate it. With fewer, the last 14 days are used when they hold 20 ratings, which covers fixes shipped without an app release. Only then does the 90-day history decide. The one-star column says which window judged the row: the release number, `(14d)`, or `(90d)` for history.
+Nothing here is tied to an app version. The verdict is judged on the **last 14 days** of ratings once a game has 20 of them, so a fix shows up as soon as players rate the game again, whether it shipped in an app update or on the server. With fewer, the 90-day history decides. The one-star column says which window judged the row: `(14d)` or `(90d)`.
 
 ## Where the data comes from
 
 **Ratings.** GameNative shows a "How did the game run?" dialog on a game's first run and again after the user changes the game's config. The one-star answers carry a reason tag: does not open, no graphics, graphics glitches, controller problems. The "Top reason" column is the most common tag and the share of tagged one-star ratings that carry it.
 
-**Telemetry.** Anonymous session reports from the app record whether the game's window ever rendered frames. "Users rendered" is the share of users who got at least one frame on screen, on the current release, in the telemetry window. A game with 10% rendered is broken for almost everyone. A game with 90% rendered and lots of one-star ratings has a first-run problem, not a runtime one.
+**Telemetry.** Anonymous session reports from the app record whether the game's window ever rendered frames. "Users rendered" is the share of users who got at least one frame on screen in the telemetry window, on any app version. A game with 10% rendered is broken for almost everyone. A game with 90% rendered and lots of one-star ratings has a first-run problem, not a runtime one.
 
 The two signals are combined into the verdict by the API that produces `data/worklist.json`. This repo only renders and tracks it.
 
@@ -38,7 +38,7 @@ The two signals are combined into the verdict by the API that produces `data/wor
 
 - The telemetry column covers **Adreno GPUs with the Turnip driver only**. Mali, PowerVR, Xclipse and Adreno-with-stock-driver users are not represented in "Users rendered". A game can be fine on Adreno and dead on Mali, or the other way round; this list will not tell you.
 - A game needs **20 ratings** to appear at all. Niche games are missing even if they are broken.
-- Everything refers to the **current app release**. Ratings are counted from the date in the header; older ratings are not used.
+- Ratings are counted from the date in the header; older ratings are not used. Telemetry covers the number of days in the header.
 - A game that rendered a frame is not necessarily playable. Crashes after the menu, missing audio, broken saves and bad performance all count as "rendered".
 - The rating comes from the user's device and setup. A bad rating for a game can mean the game, the device, the GPU driver, a missing login or a slow download. The reason tag helps, but it is a guess by the user.
 
@@ -53,7 +53,7 @@ Comments on the issues are kept. The bot only rewrites the metrics table in the 
 
 ## Reusing the data
 
-`data/worklist.json` is public and updated nightly. Each game object has the store, name, store app id where known, rating counts and percentages, the top one-star reason, the telemetry numbers, the verdict and the recovered flag. The top-level object carries `generated_at`, `release`, the `window` used and the `rules` in plain words. Use it for whatever you like; a link back is appreciated.
+`data/worklist.json` is public and updated nightly. Each game object has the store, name, store app id where known, rating counts and percentages, the top one-star reason, the telemetry numbers, the verdict and the recovered flag. The top-level object carries `generated_at`, the `window` used and the `rules` in plain words. Use it for whatever you like; a link back is appreciated.
 
 ## Running the sync yourself
 

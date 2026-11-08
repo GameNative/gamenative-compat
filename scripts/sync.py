@@ -75,14 +75,8 @@ def pct(value):
     return "n/a" if value is None else f"{value}%"
 
 
-CURRENT_RELEASE = None
-
-
-def one_star_cell(game, release=None):
-    release = release or CURRENT_RELEASE
+def one_star_cell(game):
     window = game.get("verdict_window")
-    if window == "release" and game.get("one_star_release_pct") is not None:
-        return f"{game['one_star_release_pct']}% ({release or 'release'})"
     if window == "recent" and game.get("one_star_recent_pct") is not None:
         return f"{game['one_star_recent_pct']}% (14d)"
     if window == "carried_over":
@@ -249,7 +243,7 @@ def checklist_body(verdict, heading, blurb, games, state, worklist, repo):
     lines += kept
     if len(kept) < len(items):
         lines += ["", f"{len(items) - len(kept)} more games did not fit in this issue. They are in the worklist."]
-    lines += ["", f"Data as of `{worklist.get('generated_at')}`, app release {worklist.get('release')}.", "", checklist_marker(verdict)]
+    lines += ["", f"Data as of `{worklist.get('generated_at')}`.", "", checklist_marker(verdict)]
     return "\n".join(lines)
 
 
@@ -279,7 +273,7 @@ def update_state(worklist, state):
         entry["one_star"] = one_star_count(game)
         entry["users_rendered_pct"] = game.get("users_rendered_pct")
     state["last_sync"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-    state["release"] = worklist.get("release")
+    state.pop("release", None)
     return state
 
 
@@ -326,7 +320,7 @@ def render_markdown(worklist, state, repo):
     out = []
     out.append("# GameNative compatibility worklist")
     out.append("")
-    out.append(f"Generated: `{worklist.get('generated_at')}` · App release: `{worklist.get('release')}` · "
+    out.append(f"Generated: `{worklist.get('generated_at')}` · "
                f"Ratings since: `{window.get('ratings_since')}` · Telemetry window: `{window.get('telemetry_days')}` days on `{window.get('gpu')}`")
     out.append("")
     out.append("This file is rewritten every night. To mark a game as fixed, tick its box in the checklist issue linked under each section "
@@ -340,7 +334,7 @@ def render_markdown(worklist, state, repo):
     out.append(f"- **Works, but the first launch usually fails**: {rules.get('first_run_friction', 'n/a')}.")
     out.append(f"- **Recovered**: {rules.get('recovered', 'n/a')}.")
     out.append("")
-    out.append("\"Users rendered\" is the share of users on Adreno GPUs with the Turnip driver who got the game to put a frame on screen at least once on the current release. Other GPUs are not counted. \"n/a\" means no telemetry for that game yet.")
+    out.append("\"Users rendered\" is the share of users on Adreno GPUs with the Turnip driver who got the game to put a frame on screen at least once in the telemetry window, on any app version. Other GPUs are not counted. \"n/a\" means no telemetry for that game yet.")
     out.append("")
     out.append("## Counts")
     out.append("")
@@ -433,7 +427,7 @@ def issue_body(game, worklist, repo):
         ("One-star ratings", f"{one_star_count(game)} ({one_star_cell(game)})"),
         ("One-star devices", pct(game.get("one_star_devices_pct"))),
         ("Top reason", reason),
-        (f"Ratings on release {worklist.get('release')}", f"{game.get('ratings_recent', 'n/a')} ({game.get('one_star_recent', 'n/a')} one-star)"),
+        ("Ratings in the last 14 days", f"{game.get('ratings_recent', 'n/a')} ({game.get('one_star_recent', 'n/a')} one-star)"),
         (f"Telemetry users ({window.get('gpu', 'n/a')}, {window.get('telemetry_days', 'n/a')} days)", str(game.get("telemetry_users") if game.get("telemetry_users") is not None else "n/a")),
         ("Users who ever rendered a frame", pct(game.get("users_rendered_pct"))),
         ("Sessions per user", str(game.get("sessions_per_user") if game.get("sessions_per_user") is not None else "n/a")),
@@ -441,7 +435,7 @@ def issue_body(game, worklist, repo):
     ]
     worklist_link = f"https://github.com/{repo}/blob/main/WORKLIST.md" if repo else "WORKLIST.md"
     lines = [
-        f"**{game['name']}** ({game['store']}) {'does not run' if is_broken_ish(game['verdict']) else 'is no longer on the broken lists'} in GameNative on app release {worklist.get('release')}.",
+        f"**{game['name']}** ({game['store']}) {'does not run' if is_broken_ish(game['verdict']) else 'is no longer on the broken lists'} in GameNative.",
         "",
         "| Metric | Value |",
         "|---|---|",
@@ -664,7 +658,6 @@ def manage_issues(worklist, state, args):
         log("[dry-run] no GITHUB_TOKEN/GITHUB_REPOSITORY; assuming no existing issues")
 
     state_games = state.setdefault("games", {})
-    release = worklist.get("release")
     existing = {}
     if gh:
         gh.ensure_label()
@@ -731,7 +724,7 @@ def manage_issues(worklist, state, args):
                     log(f"[dry-run] reopen #{number}: {title}")
                 else:
                     gh.update_issue(number, state="open", title=title, body=body)
-                    gh.comment(number, f"Back on the \"does not work\" list on release {release}: {game['one_star_pct']}% one-star across {game['ratings']} ratings, {pct(game.get('users_rendered_pct'))} of telemetry users rendered a frame. Reopening.")
+                    gh.comment(number, f"Back on the \"does not work\" list: {game['one_star_pct']}% one-star across {game['ratings']} ratings, {pct(game.get('users_rendered_pct'))} of telemetry users rendered a frame. Reopening.")
                     log(f"issues: reopened #{number} {title}")
                 continue
             if body_changed:
@@ -752,7 +745,7 @@ def manage_issues(worklist, state, args):
                 log(f"[dry-run] close #{number}: {title} (non-broken for {streak} syncs, verdict {game['verdict']})")
             else:
                 gh.update_issue(number, body=body)
-                gh.comment(number, f"Out of the broken lists for {streak} nightly syncs in a row on release {release}. Verdict is now {game['verdict']}: {game['one_star_pct']}% one-star across {game['ratings']} ratings, {pct(game.get('users_rendered_pct'))} of telemetry users rendered a frame. Closing. The sync reopens this if the game breaks again.")
+                gh.comment(number, f"Out of the broken lists for {streak} nightly syncs in a row. Verdict is now {game['verdict']}: {game['one_star_pct']}% one-star across {game['ratings']} ratings, {pct(game.get('users_rendered_pct'))} of telemetry users rendered a frame. Closing. The sync reopens this if the game breaks again.")
                 gh.update_issue(number, state="closed", state_reason="completed")
                 log(f"issues: closed #{number} {title}")
         elif is_open and body_changed:
@@ -780,8 +773,6 @@ def main():
     if fetched is not None:
         save_json(WORKLIST_PATH, fetched)
         worklist = fetched
-        global CURRENT_RELEASE
-        CURRENT_RELEASE = worklist.get('release')
     else:
         worklist = load_json(WORKLIST_PATH, None)
         if worklist is None:
