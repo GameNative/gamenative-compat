@@ -577,7 +577,7 @@ def issue_body(game, worklist, repo):
     if "newest_rating_at" in game:
         rows.append(("Newest rating", f"{game.get('newest_rating_at') or 'n/a'} ({age_cell(game)})"))
     if game.get("fixed_at") or is_number(game.get("post_fix_ratings")):
-        rows.append(("Config fix shipped", game.get("fixed_at") or "n/a"))
+        rows.append(("Fix shipped", game.get("fixed_at") or "n/a"))
         rows.append(("Ratings since the fix", f"{game.get('post_fix_ratings', 'n/a')} ({game.get('post_fix_one_star', 'n/a')} one-star)"))
     if "release_rendered_pct" in game:
         release = window.get("newest_release") or "newest release"
@@ -824,8 +824,10 @@ def close_off_list(gh, worklist, state, existing, by_key, planned, dry):
         log(f"issues: list has {count} games against {previous} last time; not closing issues of games missing from it")
         return
     cutoff = date.today() - timedelta(days=OFF_LIST_CLOSE_DAYS)
+    # issue markers fold "--" to "-", so compare in that form
+    listed = {key.replace("--", "-") for key in by_key}
     for key, issue in existing.items():
-        if key in by_key or issue["state"] != "open":
+        if key in listed or key in by_key or issue["state"] != "open":
             continue
         entry = state_games.get(key) or {}
         last_seen = entry.get("last_seen")
