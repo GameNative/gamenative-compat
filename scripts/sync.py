@@ -22,6 +22,15 @@ LABEL = "does-not-work"
 LABEL_COLOR = "d73a4a"
 LABEL_DESCRIPTION = "Game does not run in GameNative (auto-managed from the compat worklist)"
 CLOSE_AFTER_SYNCS = 3
+# An issue opens or reopens only after this many nightly runs in a row with a BROKEN verdict
+# judged on current ratings (not the old-history window).
+OPEN_AFTER_NIGHTS = 2
+OLD_HISTORY_WINDOWS = ("carried_over",)
+# Issues of games missing from the list close once the game has been missing this many days.
+OFF_LIST_CLOSE_DAYS = CLOSE_AFTER_SYNCS
+# Off-list closing is skipped when the fetched list is much shorter than the last one, so a
+# partial or filtered response cannot close issues in bulk.
+MIN_LIST_SHARE = 0.8
 RECENT_DAYS = 30
 MARKER_RE = re.compile(r"<!-- compat-worklist: (.+?) -->")
 ROW_RE = re.compile(r"^\|\s*\d+\s*\|\s*\[( |x|X)\][^|]*\|\s*(.+?) \(([A-Z]+)\)\s*\|")
@@ -41,6 +50,18 @@ REASONS = {
     "audio": "Audio problems",
     "crashes": "Crashes",
 }
+
+WINDOW_LABELS = {
+    "recent": "14d",
+    "last_20": "last 20",
+    "post_fix": "since fix",
+    "carried_over": "90d",
+}
+
+PENDING_VERDICT = "FIX_PENDING"
+PENDING_HEADING = "Fix shipped, waiting for ratings"
+PENDING_BLURB = ("A fix reached these games. They stay off the broken lists while ratings from players who have the fix come in, "
+                 "then the data decides again.")
 
 SECTIONS = [
     ("BROKEN", "Does not work", "Open issues track these. Pick one and fix it."),
@@ -75,7 +96,23 @@ def pct(value):
     return "n/a" if value is None else f"{value}%"
 
 
+def is_number(value):
+    return isinstance(value, (int, float)) and not isinstance(value, bool)
+
+
+def has_window(game):
+    """True when the API reports the ratings window that decided the verdict."""
+    return is_number(game.get("window_ratings")) and is_number(game.get("window_one_star"))
+
+
+def window_label(game):
+    return WINDOW_LABELS.get(game.get("verdict_window"))
+
+
 def one_star_cell(game):
+    label = window_label(game)
+    if has_window(game) and is_number(game.get("window_one_star_pct")):
+        return f"{game['window_one_star_pct']}% ({label})" if label else f"{game['window_one_star_pct']}%"
     window = game.get("verdict_window")
     if window == "recent" and game.get("one_star_recent_pct") is not None:
         return f"{game['one_star_recent_pct']}% (14d)"
@@ -91,8 +128,44 @@ def one_star_count(game):
     return round(game["ratings"] * (game.get("one_star_pct") or 0) / 100)
 
 
+def shown_counts(game):
+    """(one-star ratings, ratings) of the window that decided the verdict, else the full history."""
+    if has_window(game):
+        return int(game["window_one_star"]), int(game["window_ratings"])
+    return one_star_count(game), game["ratings"]
+
+
 def sort_key(game):
-    return (-one_star_count(game), -game["ratings"], game["name"])
+    rate = game.get("one_star_per_day")
+    one_star, ratings = shown_counts(game)
+    if is_number(rate):
+        return (-rate, -one_star, -game["ratings"], game["name"])
+    return (-one_star, -ratings, game["name"])
+
+
+def one_star_summary(game):
+    one_star, ratings = shown_counts(game)
+    label = window_label(game) if has_window(game) else None
+    where = f" ({label})" if label else ""
+    return f"{one_star} of {ratings} ratings one-star{where}"
+
+
+def age_cell(game):
+    days = game.get("newest_rating_age_days")
+    if not is_number(days):
+        return "n/a"
+    return "today" if days < 1 else f"{int(days)}d ago"
+
+
+def release_cell(game):
+    value = game.get("release_rendered_pct")
+    if not is_number(value):
+        return "n/a"
+    return f"{value}% (drop)" if game.get("release_regression") else f"{value}%"
+
+
+def has_extra_columns(games):
+    return any("newest_rating_age_days" in g or "release_rendered_pct" in g for g in games)
 
 
 def fetch_worklist(url):
@@ -224,7 +297,8 @@ def checklist_body(verdict, heading, blurb, games, state, worklist, repo):
         entry = state_games.get(game_key(g)) or {}
         box = "x" if entry.get("fixed_by_hand") else " "
         name = g["name"].replace("*", "\\*")
-        bits = [f"{one_star_count(g)} one-star of {g['ratings']}", f"{pct(g.get('users_rendered_pct'))} rendered"]
+        one_star, ratings = shown_counts(g)
+        bits = [f"{one_star} one-star of {ratings}", f"{pct(g.get('users_rendered_pct'))} rendered"]
         reason = humanise_reason(g.get("top_reason"))
         if reason:
             bits.append(reason.lower())
@@ -249,6 +323,9 @@ def checklist_body(verdict, heading, blurb, games, state, worklist, repo):
 
 def update_state(worklist, state):
     games = state.setdefault("games", {})
+    generated = worklist.get("generated_at")
+    # The same document fetched twice (the API did not regenerate) is not a new night of evidence.
+    new_run = generated is None or generated != state.get("last_generated_at")
     for game in worklist["games"]:
         key = game_key(game)
         verdict = game["verdict"]
@@ -258,6 +335,11 @@ def update_state(worklist, state):
                 continue
             entry = games[key] = new_entry(game)
         previous = entry.get("last_verdict")
+        if verdict == "BROKEN" and game.get("verdict_window") not in OLD_HISTORY_WINDOWS:
+            if new_run:
+                entry["broken_nights"] = entry.get("broken_nights", 0) + 1
+        else:
+            entry["broken_nights"] = 0
         if is_broken_ish(verdict):
             entry["non_broken_streak"] = 0
             entry["recovered_since"] = None
@@ -265,7 +347,9 @@ def update_state(worklist, state):
                 entry["fixed_by_hand"] = None
         else:
             entry["non_broken_streak"] = entry.get("non_broken_streak", 0) + 1
-            if entry.get("recovered_since") is None and (is_broken_ish(previous) or game.get("recovered")):
+            if verdict == PENDING_VERDICT:
+                pass  # off the broken lists, but not recovered until ratings after the fix say so
+            elif entry.get("recovered_since") is None and (is_broken_ish(previous) or previous == PENDING_VERDICT or game.get("recovered")):
                 entry["recovered_since"] = today()
         entry["last_verdict"] = verdict
         entry["last_seen"] = today()
@@ -273,6 +357,7 @@ def update_state(worklist, state):
         entry["one_star"] = one_star_count(game)
         entry["users_rendered_pct"] = game.get("users_rendered_pct")
     state["last_sync"] = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    state["last_generated_at"] = generated
     state.pop("release", None)
     return state
 
@@ -283,11 +368,17 @@ def issue_url(repo, number):
     return f"../../issues/{number}"
 
 
-def render_table(games, state_games, repo):
-    lines = [
-        "| # | | Game | One-star ratings | Ratings | One-star | Top reason | Users rendered | Issue |",
-        "|---:|---|---|---:|---:|---:|---|---:|---|",
-    ]
+def render_table(games, state_games, repo, extra=False):
+    if extra:
+        lines = [
+            "| # | | Game | One-star ratings | Ratings | One-star | Top reason | Users rendered | Newest rating | Newest release rendered | Issue |",
+            "|---:|---|---|---:|---:|---:|---|---:|---|---:|---|",
+        ]
+    else:
+        lines = [
+            "| # | | Game | One-star ratings | Ratings | One-star | Top reason | Users rendered | Issue |",
+            "|---:|---|---|---:|---:|---:|---|---:|---|",
+        ]
     for rank, g in enumerate(sorted(games, key=sort_key), 1):
         entry = state_games.get(game_key(g)) or {}
         if g.get("recovered"):
@@ -301,9 +392,29 @@ def render_table(games, state_games, repo):
             reason = f"{reason} ({g['reason_pct']}%)"
         number = entry.get("issue_number")
         issue = f"[#{number}]({issue_url(repo, number)})" if number else ""
+        one_star, ratings = shown_counts(g)
+        extra_cells = f"{age_cell(g)} | {release_cell(g)} | " if extra else ""
         lines.append(
-            f"| {rank} | {box} | {md_escape(g['name'])} ({g['store']}) | {one_star_count(g)} | {g['ratings']} | {one_star_cell(g)} | "
-            f"{reason or 'n/a'} | {pct(g.get('users_rendered_pct'))} | {issue} |"
+            f"| {rank} | {box} | {md_escape(g['name'])} ({g['store']}) | {one_star} | {ratings} | {one_star_cell(g)} | "
+            f"{reason or 'n/a'} | {pct(g.get('users_rendered_pct'))} | {extra_cells}{issue} |"
+        )
+    return lines
+
+
+def render_pending_table(games, state_games, repo):
+    lines = [
+        "| # | Game | Fix shipped | Ratings since the fix | One-star since the fix | Newest rating | Issue |",
+        "|---:|---|---|---:|---:|---|---|",
+    ]
+    for rank, g in enumerate(sorted(games, key=sort_key), 1):
+        entry = state_games.get(game_key(g)) or {}
+        number = entry.get("issue_number")
+        issue = f"[#{number}]({issue_url(repo, number)})" if number else ""
+        since = g.get("post_fix_ratings")
+        one = g.get("post_fix_one_star")
+        lines.append(
+            f"| {rank} | {md_escape(g['name'])} ({g['store']}) | {g.get('fixed_at') or 'n/a'} | "
+            f"{since if is_number(since) else 'n/a'} | {one if is_number(one) else 'n/a'} | {age_cell(g)} | {issue} |"
         )
     return lines
 
@@ -332,21 +443,33 @@ def render_markdown(worklist, state, repo):
     out.append(f"- **Does not work**: {rules.get('broken', 'n/a')}.")
     out.append(f"- **Probably does not work**: {rules.get('likely_broken', 'n/a')}.")
     out.append(f"- **Works, but the first launch usually fails**: {rules.get('first_run_friction', 'n/a')}.")
+    if any(has_window(g) for g in games):
+        out.append("- **Which ratings count**: the one-star columns show the ratings that decided the row: `(14d)` the last 14 days, "
+                   "`(last 20)` the newest ratings at any age, `(since fix)` ratings given after a fix shipped. "
+                   "\"Newest rating\" says how old the newest of them is.")
     out.append(f"- **Recovered**: {rules.get('recovered', 'n/a')}.")
     out.append("")
     out.append("\"Users rendered\" is the share of users on Adreno GPUs with the Turnip driver who got the game to put a frame on screen at least once in the telemetry window, on any app version. Other GPUs are not counted. \"n/a\" means no telemetry for that game yet.")
+    if has_extra_columns(games):
+        out.append("")
+        out.append("\"Newest release rendered\" is the same share counted on the newest app release only. \"(drop)\" marks a game that renders for far fewer users on that release than across all versions, which usually points at a regression in the release.")
     out.append("")
     out.append("## Counts")
     out.append("")
     out.append("| Verdict | Games |")
     out.append("|---|---:|")
-    for verdict, label in [("BROKEN", "Does not work"), ("LIKELY_BROKEN", "Probably does not work"),
-                           ("FIRST_RUN_FRICTION", "First launch fails"), ("MIXED", "Mixed"), ("WORKS", "Works")]:
+    rows = [("BROKEN", "Does not work"), ("LIKELY_BROKEN", "Probably does not work")]
+    if PENDING_VERDICT in counts or PENDING_VERDICT in (worklist.get("counts") or {}):
+        rows.append((PENDING_VERDICT, PENDING_HEADING))
+    rows += [("FIRST_RUN_FRICTION", "First launch fails"), ("MIXED", "Mixed"), ("WORKS", "Works")]
+    for verdict, label in rows:
         out.append(f"| {label} | {counts.get(verdict, 0)} |")
     out.append(f"| Total | {len(games)} |")
     out.append("")
 
     checklists = state.get("checklists", {})
+    extra = has_extra_columns(games)
+    pending = [g for g in games if g["verdict"] == PENDING_VERDICT]
     for verdict, heading, blurb in SECTIONS:
         subset = [g for g in games if g["verdict"] == verdict]
         out.append(f"## {heading} ({len(subset)})")
@@ -358,10 +481,17 @@ def render_markdown(worklist, state, repo):
             out.append(blurb)
         out.append("")
         if subset:
-            out.extend(render_table(subset, state_games, repo))
+            out.extend(render_table(subset, state_games, repo, extra))
         else:
             out.append("Nothing here right now.")
         out.append("")
+        if verdict == "LIKELY_BROKEN" and pending:
+            out.append(f"## {PENDING_HEADING} ({len(pending)})")
+            out.append("")
+            out.append(PENDING_BLURB)
+            out.append("")
+            out.extend(render_pending_table(pending, state_games, repo))
+            out.append("")
 
     cutoff = date.today() - timedelta(days=RECENT_DAYS)
     by_key = {game_key(g): g for g in games}
@@ -405,6 +535,14 @@ def render_markdown(worklist, state, repo):
     return "\n".join(out)
 
 
+def issue_status(game):
+    if is_broken_ish(game["verdict"]):
+        return "does not run"
+    if game["verdict"] == PENDING_VERDICT:
+        return "has a fix shipped, waiting for ratings from players who have it,"
+    return "is no longer on the broken lists"
+
+
 def issue_title(game):
     return f"{game['name']} ({game['store']}) does not work"
 
@@ -424,7 +562,8 @@ def issue_body(game, worklist, repo):
         ("Verdict", game["verdict"]),
         ("Ratings", str(game["ratings"])),
         ("Devices that rated", str(game.get("devices", "n/a"))),
-        ("One-star ratings", f"{one_star_count(game)} ({one_star_cell(game)})"),
+        ("One-star ratings", f"{shown_counts(game)[0]} of {shown_counts(game)[1]} ({one_star_cell(game)})"
+         if has_window(game) else f"{one_star_count(game)} ({one_star_cell(game)})"),
         ("One-star devices", pct(game.get("one_star_devices_pct"))),
         ("Top reason", reason),
         ("Ratings in the last 14 days", f"{game.get('ratings_recent', 'n/a')} ({game.get('one_star_recent', 'n/a')} one-star)"),
@@ -433,9 +572,21 @@ def issue_body(game, worklist, repo):
         ("Sessions per user", str(game.get("sessions_per_user") if game.get("sessions_per_user") is not None else "n/a")),
         ("Typical failed windows", game.get("typical_failed_windows") or "n/a"),
     ]
+    if has_window(game):
+        rows[5:5] = [("One-star ratings, 90 days", f"{one_star_count(game)} of {game['ratings']} ({game['one_star_pct']}%)")]
+    if "newest_rating_at" in game:
+        rows.append(("Newest rating", f"{game.get('newest_rating_at') or 'n/a'} ({age_cell(game)})"))
+    if game.get("fixed_at") or is_number(game.get("post_fix_ratings")):
+        rows.append(("Fix shipped", game.get("fixed_at") or "n/a"))
+        rows.append(("Ratings since the fix", f"{game.get('post_fix_ratings', 'n/a')} ({game.get('post_fix_one_star', 'n/a')} one-star)"))
+    if "release_rendered_pct" in game:
+        release = window.get("newest_release") or "newest release"
+        users = game.get("release_users")
+        rows.append((f"Users who rendered a frame on {release}",
+                     f"{release_cell(game)} of {users if users is not None else 'n/a'} users"))
     worklist_link = f"https://github.com/{repo}/blob/main/WORKLIST.md" if repo else "WORKLIST.md"
     lines = [
-        f"**{game['name']}** ({game['store']}) {'does not run' if is_broken_ish(game['verdict']) else 'is no longer on the broken lists'} in GameNative.",
+        f"**{game['name']}** ({game['store']}) {issue_status(game)} in GameNative.",
         "",
         "| Metric | Value |",
         "|---|---|",
@@ -501,6 +652,8 @@ class GitHub:
         return self._request("GET", path, params=params)[1]
 
     def write(self, method, path, body):
+        if self.dry_run:
+            raise RuntimeError(f"refusing {method} {path} in a dry run")
         self.writes += 1
         status, data = self._request(method, path, body=body)
         time.sleep(1)
@@ -646,6 +799,55 @@ def sync_checklists(gh, worklist, state, args):
             log(f"checklists: updated #{number} {title}")
 
 
+def close_comment(game, streak):
+    if game["verdict"] == PENDING_VERDICT:
+        return (f"A fix for this game has shipped, and the list is waiting for ratings from players who have it "
+                f"({streak} nightly syncs off the broken lists). Closing. The sync reopens this if those ratings still say it does not work.")
+    return (f"Out of the broken lists for {streak} nightly syncs in a row. Verdict is now {game['verdict']}: {one_star_summary(game)}, "
+            f"{pct(game.get('users_rendered_pct'))} of telemetry users rendered a frame. Closing. The sync reopens this if the game breaks again.")
+
+
+OFF_LIST_COMMENT = ("This game no longer has enough recent ratings to appear on the worklist, so the data cannot say whether it still fails. "
+                    "Closing. The sync reopens this if the game comes back on the list as not working.")
+
+
+def close_off_list(gh, worklist, state, existing, by_key, planned, dry):
+    """Close open issues whose game has been missing from the list for OFF_LIST_CLOSE_DAYS days."""
+    state_games = state.setdefault("games", {})
+    if worklist.get("_from_fallback"):
+        log("issues: using the committed list after a failed fetch; not closing issues of games missing from it")
+        return
+    count = len(worklist["games"])
+    previous = state.get("last_game_count")
+    state["last_game_count"] = count
+    if previous and count < MIN_LIST_SHARE * previous:
+        log(f"issues: list has {count} games against {previous} last time; not closing issues of games missing from it")
+        return
+    cutoff = date.today() - timedelta(days=OFF_LIST_CLOSE_DAYS)
+    # issue markers fold "--" to "-", so compare in that form
+    listed = {key.replace("--", "-") for key in by_key}
+    for key, issue in existing.items():
+        if key in listed or key in by_key or issue["state"] != "open":
+            continue
+        entry = state_games.get(key) or {}
+        last_seen = entry.get("last_seen")
+        try:
+            gone_long_enough = last_seen is None or date.fromisoformat(last_seen) <= cutoff
+        except ValueError:
+            gone_long_enough = True
+        if not gone_long_enough:
+            continue
+        number = issue["number"]
+        planned["close"] += 1
+        planned["close_off_list"] += 1
+        if dry:
+            log(f"[dry-run] close #{number}: {issue.get('title')} (missing from the list, last seen {last_seen or 'never'})")
+            continue
+        gh.comment(number, OFF_LIST_COMMENT)
+        gh.update_issue(number, state="closed", state_reason="completed")
+        log(f"issues: closed #{number} {issue.get('title')} (missing from the list)")
+
+
 def manage_issues(worklist, state, args):
     token = os.environ.get("GITHUB_TOKEN")
     repo = os.environ.get("GITHUB_REPOSITORY")
@@ -665,7 +867,7 @@ def manage_issues(worklist, state, args):
         log(f"issues: found {len(existing)} existing '{LABEL}' issues with a marker")
 
     by_key = {game_key(g): g for g in sorted(worklist["games"], key=sort_key)}
-    planned = {"create": 0, "update": 0, "reopen": 0, "close": 0, "unchanged": 0}
+    planned = {"create": 0, "update": 0, "reopen": 0, "close": 0, "close_off_list": 0, "close_pending": 0, "held": 0, "unchanged": 0}
 
     for key, issue in existing.items():
         entry = state_games.get(key)
@@ -685,12 +887,14 @@ def manage_issues(worklist, state, args):
         entry = state_games.get(key)
         issue = existing.get(key)
         number = entry.get("issue_number") if entry else None
-        qualifies = game["verdict"] == "BROKEN"
+        qualifies = game["verdict"] == "BROKEN" and (entry or {}).get("broken_nights", 0) >= OPEN_AFTER_NIGHTS
         title = issue_title(game)
         body = issue_body(game, worklist, repo)
 
         if issue is None and number is None:
             if not qualifies:
+                if game["verdict"] == "BROKEN":
+                    planned["held"] += 1
                 continue
             planned["create"] += 1
             if dry:
@@ -713,7 +917,7 @@ def manage_issues(worklist, state, args):
         current_body = (issue.get("body") or "").replace("\r\n", "\n").rstrip()
         body_changed = current_body != body.rstrip() or issue.get("title") != title
 
-        if game["verdict"] == "BROKEN":
+        if game["verdict"] == "BROKEN" and (is_open or qualifies):
             if not is_open and issue.get("state_reason") == "not_planned":
                 log(f"issues: #{number} {title} was closed as not planned by a human; leaving it closed")
                 planned["unchanged"] += 1
@@ -724,7 +928,7 @@ def manage_issues(worklist, state, args):
                     log(f"[dry-run] reopen #{number}: {title}")
                 else:
                     gh.update_issue(number, state="open", title=title, body=body)
-                    gh.comment(number, f"Back on the \"does not work\" list: {game['one_star_pct']}% one-star across {game['ratings']} ratings, {pct(game.get('users_rendered_pct'))} of telemetry users rendered a frame. Reopening.")
+                    gh.comment(number, f"Back on the \"does not work\" list for {OPEN_AFTER_NIGHTS} nights in a row: {one_star_summary(game)}, {pct(game.get('users_rendered_pct'))} of telemetry users rendered a frame. Reopening.")
                     log(f"issues: reopened #{number} {title}")
                 continue
             if body_changed:
@@ -738,14 +942,23 @@ def manage_issues(worklist, state, args):
                 planned["unchanged"] += 1
             continue
 
+        if game["verdict"] == "BROKEN":
+            # closed, and not yet broken on enough nights in a row to reopen
+            planned["held"] += 1
+            if dry:
+                log(f"[dry-run] hold #{number}: {title} (broken {entry.get('broken_nights', 0)}/{OPEN_AFTER_NIGHTS} nights)")
+            continue
+
         streak = entry.get("non_broken_streak", 0)
         if is_open and streak >= CLOSE_AFTER_SYNCS:
             planned["close"] += 1
+            if game["verdict"] == PENDING_VERDICT:
+                planned["close_pending"] += 1
             if dry:
                 log(f"[dry-run] close #{number}: {title} (non-broken for {streak} syncs, verdict {game['verdict']})")
             else:
                 gh.update_issue(number, body=body)
-                gh.comment(number, f"Out of the broken lists for {streak} nightly syncs in a row. Verdict is now {game['verdict']}: {game['one_star_pct']}% one-star across {game['ratings']} ratings, {pct(game.get('users_rendered_pct'))} of telemetry users rendered a frame. Closing. The sync reopens this if the game breaks again.")
+                gh.comment(number, close_comment(game, streak))
                 gh.update_issue(number, state="closed", state_reason="completed")
                 log(f"issues: closed #{number} {title}")
         elif is_open and body_changed:
@@ -758,8 +971,12 @@ def manage_issues(worklist, state, args):
         else:
             planned["unchanged"] += 1
 
+    close_off_list(gh, worklist, state, existing, by_key, planned, dry)
+
     prefix = "[dry-run] plan" if dry else "issues: done"
-    log(f"{prefix}: create {planned['create']}, update {planned['update']}, reopen {planned['reopen']}, close {planned['close']}, unchanged {planned['unchanged']}")
+    log(f"{prefix}: create {planned['create']}, update {planned['update']}, reopen {planned['reopen']}, close {planned['close']} "
+        f"(off the list {planned['close_off_list']}, fix pending {planned['close_pending']}, other verdicts {planned['close'] - planned['close_off_list'] - planned['close_pending']}), "
+        f"waiting for a second broken night {planned['held']}, unchanged {planned['unchanged']}")
 
 
 def main():
@@ -777,6 +994,7 @@ def main():
         worklist = load_json(WORKLIST_PATH, None)
         if worklist is None:
             raise RuntimeError(f"no worklist available: fetch failed and {WORKLIST_PATH} does not exist")
+        worklist["_from_fallback"] = True
         log(f"using committed {WORKLIST_PATH.relative_to(ROOT)} ({len(worklist['games'])} games, generated {worklist.get('generated_at')})")
 
     state = load_json(STATE_PATH, {"games": {}})

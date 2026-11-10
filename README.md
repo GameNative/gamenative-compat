@@ -14,17 +14,20 @@ Every game that has enough data gets one verdict:
 |---|---|
 | **Does not work** (`BROKEN`) | Most ratings are one star and most users never get a game window to draw a frame. Every game with this verdict gets an issue. |
 | **Probably does not work** (`LIKELY_BROKEN`) | Half or more of the ratings are one star and rendering looks bad, but the signal is weaker. Needs someone to confirm on a device before it becomes an issue. |
+| **Fix shipped, waiting for ratings** (`FIX_PENDING`) | A fix reached the game, and the list is waiting for ratings from players who have it. Kept off the broken lists until those ratings decide. |
 | **Works, but the first launch usually fails** (`FIRST_RUN_FRICTION`) | Users complain, but most of them do get the game to render eventually. Usually a redistributable, launcher, login or setting that the first run trips over. |
 | `MIXED` | Some users play, some do not. Not shown in the list. |
 | `WORKS` | Fine. Not shown in the list. |
 
-The tables are ordered by the number of one-star ratings, which is the count of players who hit the problem, so the top rows are where a fix helps the most people; the `#` column is just the row rank. The exact thresholds are in the header of WORKLIST.md; they come from the data file so they are always the ones used for the current render.
+The tables are ordered by how many one-star ratings a game collects per day in the ratings that decided its verdict, so the top rows are where players hit the problem right now; the `#` column is just the row rank. The one-star columns show those same ratings, so the number next to a game is the one that put it there. The exact thresholds are in the header of WORKLIST.md; they come from the data file so they are always the ones used for the current render.
 
-A game is **recovered** when it is no longer `BROKEN` or `LIKELY_BROKEN`. Its row shows `[x]`, it moves to the "Recently recovered" section for 30 days, and its issue closes after it stays out of the broken lists for 3 nightly syncs in a row. If it breaks again, the issue reopens. Closing an issue by hand as "not planned" tells the sync to leave it closed for good; closing it as "completed" while the data still says broken gets it reopened the next night with a comment.
+A game is **recovered** when it is no longer `BROKEN` or `LIKELY_BROKEN` (a game waiting for ratings after a fix is not counted as recovered yet). Its row shows `[x]`, it moves to the "Recently recovered" section for 30 days, and its issue closes after it stays out of the broken lists for 3 nightly syncs in a row. An issue also closes, with a comment, when its game has been missing from the list for 3 days (too few recent ratings to say anything).
+
+An issue opens, or reopens, only after the game has been on the "does not work" list for 2 nightly syncs in a row, judged on current ratings. One bad night does not reopen anything. Closing an issue by hand as "not planned" tells the sync to leave it closed for good; closing it as "completed" while the data still says broken gets it reopened with a comment.
 
 ## How a game leaves the list
 
-Nothing here is tied to an app version. The verdict is judged on the **last 14 days** of ratings once a game has 20 of them, so a fix shows up as soon as players rate the game again, whether it shipped in an app update or on the server. With fewer, the 90-day history decides. The one-star column says which window judged the row: `(14d)` or `(90d)`.
+The verdict is judged on recent ratings, not on months of history, so a fix shows up as soon as players rate the game again. The one-star column says which ratings judged the row: `(14d)` for the last 14 days, `(last 20)` for the newest ratings of a game that is rated less often, or `(since fix)` for ratings given after a fix shipped. "Newest rating" says how old the newest of them is. When a fix ships for a game, it moves to "Fix shipped, waiting for ratings" until players who have the fix have rated it.
 
 ## Where the data comes from
 
@@ -38,7 +41,7 @@ The two signals are combined into the verdict by the API that produces `data/wor
 
 - The telemetry column covers **Adreno GPUs with the Turnip driver only**. Mali, PowerVR, Xclipse and Adreno-with-stock-driver users are not represented in "Users rendered". A game can be fine on Adreno and dead on Mali, or the other way round; this list will not tell you.
 - A game needs **20 ratings** to appear at all. Niche games are missing even if they are broken.
-- Ratings are counted from the date in the header; older ratings are not used. Telemetry covers the number of days in the header.
+- Ratings are counted from the date in the header; older ratings are not used. Telemetry covers the number of days in the header. "Newest release rendered" covers the newest app release only.
 - A game that rendered a frame is not necessarily playable. Crashes after the menu, missing audio, broken saves and bad performance all count as "rendered".
 - The rating comes from the user's device and setup. A bad rating for a game can mean the game, the device, the GPU driver, a missing login or a slow download. The reason tag helps, but it is a guess by the user.
 
@@ -53,7 +56,7 @@ Comments on the issues are kept. The bot only rewrites the metrics table in the 
 
 ## Reusing the data
 
-`data/worklist.json` is public and updated nightly. Each game object has the store, name, store app id where known, rating counts and percentages, the top one-star reason, the telemetry numbers, the verdict and the recovered flag. The top-level object carries `generated_at`, the `window` used and the `rules` in plain words. Use it for whatever you like; a link back is appreciated.
+`data/worklist.json` is public and updated nightly. Each game object has the store, name, store app id where known, rating counts and percentages (over the full window and over the ratings that decided the verdict), the top one-star reason, the telemetry numbers, the verdict and the recovered flag. The top-level object carries `generated_at`, the `window` used and the `rules` in plain words. Use it for whatever you like; a link back is appreciated.
 
 ## Running the sync yourself
 
