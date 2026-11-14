@@ -58,6 +58,25 @@ WINDOW_LABELS = {
     "carried_over": "90d",
 }
 
+SIGNATURES = {
+    "no_window": "No game window",
+    "window_then_exit": "Window, then exits",
+    "no_frames": "No frames",
+    "frames_then_exit": "Frames, then exits",
+}
+
+POPULAR_HEADING = "Popular games that do not work"
+POPULAR_BLURB = ("The most popular games that most players cannot play, most popular first. "
+                 "Popularity counts everyone who ever launched or installed the game, the phone models that rated it and its Steam reviews, "
+                 "so the order does not depend on how many people tried it this week. A game joins after two nights in a row of failing "
+                 "and leaves after three nights in a row of working.")
+# Rows shown per table; the full lists are in data/worklist.json.
+POPULAR_ROWS = 200
+RECOVERS_ROWS = 100
+RECOVERS_HEADING = "Works after a failed first run"
+RECOVERS_BLURB = ("Most players get these games running, but their first session usually fails. "
+                  "The first run is the problem: a redistributable, a launcher, a login or a setting.")
+
 PENDING_VERDICT = "FIX_PENDING"
 PENDING_HEADING = "Fix shipped, waiting for ratings"
 PENDING_BLURB = ("A fix reached these games. They stay off the broken lists while ratings from players who have the fix come in, "
@@ -166,6 +185,108 @@ def release_cell(game):
 
 def has_extra_columns(games):
     return any("newest_rating_age_days" in g or "release_rendered_pct" in g for g in games)
+
+
+def not_working_section(worklist):
+    section = worklist.get("not_working")
+    if isinstance(section, dict) and isinstance(section.get("games"), list):
+        return section
+    return None
+
+
+def count_cell(value):
+    return f"{value:,}" if is_number(value) else "n/a"
+
+
+def stores_cell(game):
+    stores = game.get("stores") or {}
+    if len(stores) <= 1:
+        return ", ".join(stores) or "n/a"
+    return ", ".join(f"{s} {v}%" for s, v in sorted(stores.items(), key=lambda x: -x[1]))
+
+
+def reached_cell(game):
+    text = f"{game['reached_pct']:g}% of {game['retry_users']}"
+    if game.get("low_sample"):
+        text += " (few players)"
+    if game.get("carried_over"):
+        text += f" (last known, {str(game.get('last_session_at') or '')[:10]})"
+    return text
+
+
+def trend_cell(game):
+    points = game.get("trend") or []
+    return " · ".join(f"{p['release']}: {p['reached_pct']:g}%" for p in points) or "n/a"
+
+
+def signature_cell(game):
+    sig = game.get("signature")
+    if not isinstance(sig, dict):
+        return "n/a"
+    text = SIGNATURES.get(sig.get("kind"), str(sig.get("kind")))
+    seconds = sig.get("seconds")
+    if not is_number(seconds) or seconds <= 0:
+        return text
+    if sig.get("kind") == "no_window":
+        text += f", sessions end at ~{int(seconds)}s"
+    else:
+        text += f" after ~{int(seconds)}s"
+    return text
+
+
+def fix_cell(game):
+    fixes = game.get("overlays") or []
+    dates = sorted({f.get("fixed_at") or "no date" for f in fixes})
+    return ", ".join(f"fix {d}" for d in dates) if dates else ""
+
+
+def render_popular_table(games):
+    lines = [
+        "| # | Game | Stores | Launched | Installs | Phones rated | Steam reviews | Played 10 min | Ever rendered | By release | Failure | Anti-cheat | Fix | On list since |",
+        "|---:|---|---|---:|---:|---:|---:|---|---:|---|---|---|---|---|",
+    ]
+    for g in games:
+        lines.append(
+            f"| {g.get('rank', '')} | {md_escape(g['name'])} | {stores_cell(g)} | {count_cell(g.get('launch_users'))} | "
+            f"{count_cell(g.get('installers'))} | {count_cell(g.get('rated_models'))} | {count_cell(g.get('steam_reviews'))} | "
+            f"{reached_cell(g)} | {pct(g.get('ever_rendered_pct'))} | {trend_cell(g)} | {md_escape(signature_cell(g))} | "
+            f"{md_escape(g.get('anticheat') or '')} | {fix_cell(g)} | {g.get('not_working_since') or ''} |"
+        )
+    return lines
+
+
+def render_recovers_table(games):
+    lines = [
+        "| # | Game | Stores | Launched | First session rendered | Ever rendered | Played 10 min | Fix |",
+        "|---:|---|---|---:|---:|---:|---|---|",
+    ]
+    for g in games:
+        lines.append(
+            f"| {g.get('rank', '')} | {md_escape(g['name'])} | {stores_cell(g)} | {count_cell(g.get('launch_users'))} | "
+            f"{pct(g.get('first_rendered_pct'))} | {pct(g.get('ever_rendered_pct'))} | {reached_cell(g)} | {fix_cell(g)} |"
+        )
+    return lines
+
+
+def render_popular(section):
+    games = section["games"]
+    recovers = section.get("recovers_after_first_run") or []
+    out = [f"## {POPULAR_HEADING} ({len(games)})", "", POPULAR_BLURB, ""]
+    out.append("\"Played 10 min\" is the share of players who launched the game at least twice on the newest app releases and got "
+               "10 minutes of play with the game window rendering, out of that many players. \"(few players)\" means too few players "
+               "for a firm call. \"Ever rendered\" is the share of players whose game window ever rendered. \"By release\" repeats "
+               "\"Played 10 min\" per app release, newest first. \"Failure\" is what most failing players see. "
+               f"Popularity as of `{section.get('popularity_as_of')}`; app releases read: {', '.join(section.get('releases') or []) or 'n/a'}.")
+    out.append("")
+    out.extend(render_popular_table(games[:POPULAR_ROWS]) if games else ["Nothing here right now."])
+    if len(games) > POPULAR_ROWS:
+        out += ["", f"{len(games) - POPULAR_ROWS} less popular games are in [data/worklist.json](data/worklist.json) under `not_working`."]
+    out += ["", f"## {RECOVERS_HEADING} ({len(recovers)})", "", RECOVERS_BLURB, ""]
+    out.extend(render_recovers_table(recovers[:RECOVERS_ROWS]) if recovers else ["Nothing here right now."])
+    if len(recovers) > RECOVERS_ROWS:
+        out += ["", f"{len(recovers) - RECOVERS_ROWS} more are in [data/worklist.json](data/worklist.json)."]
+    out.append("")
+    return out
 
 
 def fetch_worklist(url):
@@ -438,6 +559,14 @@ def render_markdown(worklist, state, repo):
                "(or change `[ ]` to `[x]` on its row here). The sync remembers the tick with its date until the data agrees and the game leaves the list. "
                "Untick to undo. See the [README](README.md) for how to read it and how to help.")
     out.append("")
+    popular = not_working_section(worklist)
+    if popular is not None:
+        out.extend(render_popular(popular))
+        out.append("## Lists by ratings")
+        out.append("")
+        out.append("The lists below judge games by their ratings. They also cover games with too little telemetry for the list above. "
+                   "Their issues and checklists work as before.")
+        out.append("")
     out.append("## How a game lands here")
     out.append("")
     out.append(f"- **Does not work**: {rules.get('broken', 'n/a')}.")
@@ -458,6 +587,9 @@ def render_markdown(worklist, state, repo):
     out.append("")
     out.append("| Verdict | Games |")
     out.append("|---|---:|")
+    if popular is not None:
+        out.append(f"| {POPULAR_HEADING} | {len(popular['games'])} |")
+        out.append(f"| {RECOVERS_HEADING} | {len(popular.get('recovers_after_first_run') or [])} |")
     rows = [("BROKEN", "Does not work"), ("LIKELY_BROKEN", "Probably does not work")]
     if PENDING_VERDICT in counts or PENDING_VERDICT in (worklist.get("counts") or {}):
         rows.append((PENDING_VERDICT, PENDING_HEADING))

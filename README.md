@@ -6,6 +6,21 @@ A public list of PC games that do not run in [GameNative](https://gamenative.app
 - **[Issues labelled `does-not-work`](../../issues?q=label%3Adoes-not-work)**: one per broken game. These are the things to fix.
 - **[data/worklist.json](data/worklist.json)**: the raw data, free to reuse.
 
+## Popular games that do not work
+
+The first list in WORKLIST.md is the most popular games that most players cannot play, most popular first. It is judged on play telemetry, not ratings:
+
+- **Played 10 min**: of the players who launched the game at least twice on the newest app releases, the share who got 10 minutes of play with the game window rendering. A game is on the list when that share is far below the typical game on the same releases. When a release has few players for a game, the newest releases are counted together; "(few players)" means even that was not enough for a firm call.
+- **Popularity** decides the order: everyone who ever launched the game, everyone who started an install, the phone models that rated it, and its Steam review count where known. It does not depend on how many people tried the game this week, so the order only moves when a game joins or leaves.
+- A game joins after two nights in a row of failing and leaves after three nights in a row of working, so one noisy night does not move it.
+- **Ever rendered**: the share of players whose game window rendered at least once. **By release**: "Played 10 min" per app release. **Failure**: what most failing players see, either no game window at all or a window followed by an exit. **Anti-cheat**: the anti-cheat the app detected, if most sessions report one. **Fix**: the date a config fix for the game shipped.
+- Stores are merged by game name; the "Stores" column shows the split of players.
+- Tools, VR-only titles and custom imports are left out.
+
+"Works after a failed first run" lists games most players get running eventually even though their first session usually fails.
+
+The lists further down are judged on ratings and work as described below. Issues and checklists still come from them.
+
 ## How to read the verdicts
 
 Every game that has enough data gets one verdict:
@@ -56,7 +71,7 @@ Comments on the issues are kept. The bot only rewrites the metrics table in the 
 
 ## Reusing the data
 
-`data/worklist.json` is public and updated nightly. Each game object has the store, name, store app id where known, rating counts and percentages (over the full window and over the ratings that decided the verdict), the top one-star reason, the telemetry numbers, the verdict and the recovered flag. The top-level object carries `generated_at`, the `window` used and the `rules` in plain words. Use it for whatever you like; a link back is appreciated.
+`data/worklist.json` is public and updated nightly. `not_working` holds the popular list (`games`) and the first-run list (`recovers_after_first_run`) with the numbers shown in WORKLIST.md. Each object in the top-level `games` list has the store, name, store app id where known, rating counts and percentages (over the full window and over the ratings that decided the verdict), the top one-star reason, the telemetry numbers, the verdict and the recovered flag. The top-level object carries `generated_at`, the `window` used and the `rules` in plain words. Use it for whatever you like; a link back is appreciated.
 
 ## Running the sync yourself
 
