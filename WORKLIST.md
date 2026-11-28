@@ -664,7 +664,7 @@ Most users get a frame on screen eventually. The first run is the problem: a red
 | 279 | [ ] | Command & Conquer™ Red Alert™ 3 (STEAM) | 10 | 20 | 50% (last 20) | No graphics (38%) | 93% | 5d ago | n/a | [#327](https://github.com/GameNative/gamenative-compat/issues/327) |
 | 280 | [ ] | ONE PIECE: PIRATE WARRIORS 4 (STEAM) | 10 | 20 | 50% (last 20) | Does not open (71%) | 89% | 6d ago | n/a | [#277](https://github.com/GameNative/gamenative-compat/issues/277) |
 
-## Recently recovered (344)
+## Recently recovered (340)
 
 Games that left the two broken lists in the last 30 days. Their issues close after 3 nights in a row of staying out.
 
@@ -963,54 +963,50 @@ Games that left the two broken lists in the last 30 days. Their issues close aft
 | 291 | [x] | FATE (STEAM) | 12 | 2026-11-01 | 21 | 91% |  |
 | 292 | [x] | Jazz Jackrabbit 2: The Secret Files (GOG) | 12 | 2026-11-05 | 20 | 100% |  |
 | 293 | [x] | Capcom Arcade 2nd Stadium (STEAM) | 12 | 2026-11-09 | 20 | 67% |  |
-| 294 | [x] | Commander Keen Complete Pack (STEAM) | 12 | 2026-10-28 | 20 | 100% |  |
-| 295 | [x] | Hitman: Contracts (STEAM) | 12 | 2026-11-23 | 20 | 67% |  |
-| 296 | [x] | GRIP: Combat Racing (STEAM) | 11 | 2026-11-09 | 32 | 81% |  |
-| 297 | [x] | GRANDIA II HD Remaster (STEAM) | 11 | 2026-11-09 | 29 | 92% |  |
-| 298 | [x] | Blaster Master Zero (STEAM) | 11 | 2026-11-11 | 27 | 89% |  |
-| 299 | [x] | Overlord (STEAM) | 11 | 2026-11-08 | 26 | 39% |  |
-| 300 | [x] | Antichamber (STEAM) | 11 | 2026-11-18 | 25 | 75% |  |
-| 301 | [x] | SKALD: Against the Black Priory (STEAM) | 11 | 2026-11-09 | 25 | 96% |  |
-| 302 | [x] | Alan Wake's American Nightmare (EPIC) | 11 | 2026-11-09 | 24 | n/a |  |
-| 303 | [x] | HITMAN World of Assassination (STEAM) | 11 | 2026-11-09 | 24 | 76% |  |
-| 304 | [x] | Ready or Not (STEAM) | 11 | 2026-11-09 | 23 | 73% |  |
-| 305 | [x] | Lost Castle 2 (STEAM) | 11 | 2026-11-09 | 22 | 94% |  |
-| 306 | [x] | Baldur's Gate II: Enhanced Edition (STEAM) | 11 | 2026-11-18 | 21 | 75% |  |
-| 307 | [x] | Cruelty Squad (STEAM) | 11 | 2026-11-09 | 21 | 82% |  |
-| 308 | [x] | The Lord of the Rings: War in the North™ - Legacy Edition (STEAM) | 11 | 2026-11-09 | 21 | 94% |  |
-| 309 | [x] | Another World: 20th Anniversary Edition (GOG) | 11 | 2026-11-21 | 20 | 69% |  |
-| 310 | [x] | The Stanley Parable (STEAM) | 11 | 2026-11-13 | 20 | 75% |  |
-| 311 | [x] | F1 2015 (STEAM) | 10 | 2026-11-05 | 29 | 91% |  |
-| 312 | [x] | Intravenous 2 (STEAM) | 10 | 2026-11-09 | 26 | 95% |  |
-| 313 | [x] | RollerCoaster Tycoon® 3: Complete Edition (EPIC) | 10 | 2026-11-09 | 24 | 89% | [#409](https://github.com/GameNative/gamenative-compat/issues/409) |
-| 314 | [x] | Tiny Glade (STEAM) | 10 | 2026-11-09 | 23 | 53% |  |
-| 315 | [x] | FINAL FANTASY TYPE-0 HD (STEAM) | 10 | 2026-11-10 | 22 | 75% |  |
-| 316 | [x] | Intravenous (STEAM) | 10 | 2026-11-09 | 22 | 87% |  |
-| 317 | [x] | Beatblock (STEAM) | 10 | 2026-11-09 | 20 | 91% |  |
-| 318 | [x] | DiRT 4 (STEAM) | 10 | 2026-11-09 | 20 | 100% |  |
-| 319 | [x] | Haydee (STEAM) | 10 | 2026-11-09 | 20 | 83% |  |
-| 320 | [x] | Pathologic Classic HD (STEAM) | 10 | 2026-10-28 | 20 | 86% |  |
-| 321 | [x] | Pillars of Eternity (STEAM) | 10 | 2026-11-21 | 20 | 100% |  |
-| 322 | [x] | Secret of Mana (STEAM) | 10 | 2026-11-18 | 20 | 70% |  |
-| 323 | [x] | Batman™: Arkham Origins (GOG) | 9 | 2026-11-09 | 22 | 88% |  |
-| 324 | [x] | Evoland (STEAM) | 9 | 2026-11-11 | 22 | n/a |  |
-| 325 | [x] | Guacamelee! Gold Edition (STEAM) | 9 | 2026-11-11 | 22 | 69% | [#322](https://github.com/GameNative/gamenative-compat/issues/322) |
-| 326 | [x] | Need for Speed: Undercover (STEAM) | 9 | 2026-11-11 | 22 | n/a | [#292](https://github.com/GameNative/gamenative-compat/issues/292) |
-| 327 | [x] | Call of Duty: Black Ops II - Multiplayer (STEAM) | 9 | 2026-11-17 | 20 | 33% |  |
-| 328 | [x] | Quake III Arena (STEAM) | 9 | 2026-11-03 | 20 | 27% |  |
-| 329 | [x] | UNDEFEATED (STEAM) | 9 | 2026-11-09 | 20 | 70% |  |
-| 330 | [x] | Ultrapool (STEAM) | 9 | 2026-11-09 | 20 | n/a |  |
-| 331 | [x] | Rayman Origins (GOG) | 8 | 2026-11-09 | 22 | 50% |  |
-| 332 | [x] | BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien (STEAM) | 8 | 2026-11-01 | 22 | n/a |  |
-| 333 | [x] | GRANDIA HD Remaster (STEAM) | 8 | 2026-11-09 | 22 | 93% |  |
-| 334 | [x] | Aperture Desk Job (STEAM) | 8 | 2026-11-03 | 21 | n/a |  |
-| 335 | [x] | Pocket Mirror ~ GoldenerTraum (STEAM) | 8 | 2026-11-09 | 20 | 71% |  |
-| 336 | [x] | Soul's Remnant (STEAM) | 8 | 2026-11-11 | 20 | n/a |  |
-| 337 | [x] | DRAGON BALL XENOVERSE (STEAM) | 7 | 2026-10-28 | 23 | 52% |  |
-| 338 | [x] | Lust Goddess (STEAM) | 7 | 2026-11-09 | 21 | 64% |  |
-| 339 | [x] | WORLD OF FINAL FANTASY (STEAM) | 7 | 2026-11-09 | 21 | 82% |  |
-| 340 | [x] | Mina the Hollower (GOG) | 7 | 2026-10-28 | 20 | 74% |  |
-| 341 | [x] | CULTIC (STEAM) | 7 | 2026-11-09 | 20 | 53% |  |
-| 342 | [x] | Legend of Grimrock 2 (STEAM) | 7 | 2026-11-09 | 20 | 92% | [#352](https://github.com/GameNative/gamenative-compat/issues/352) |
-| 343 | [x] | Crimzon Clover World EXplosion (STEAM) | 6 | 2026-11-09 | 23 | 86% |  |
-| 344 | [x] | Life is Strange Remastered (STEAM) | 5 | 2026-11-09 | 20 | 88% | [#436](https://github.com/GameNative/gamenative-compat/issues/436) |
+| 294 | [x] | Hitman: Contracts (STEAM) | 12 | 2026-11-23 | 20 | 67% |  |
+| 295 | [x] | GRIP: Combat Racing (STEAM) | 11 | 2026-11-09 | 32 | 81% |  |
+| 296 | [x] | GRANDIA II HD Remaster (STEAM) | 11 | 2026-11-09 | 29 | 92% |  |
+| 297 | [x] | Blaster Master Zero (STEAM) | 11 | 2026-11-11 | 27 | 89% |  |
+| 298 | [x] | Overlord (STEAM) | 11 | 2026-11-08 | 26 | 39% |  |
+| 299 | [x] | Antichamber (STEAM) | 11 | 2026-11-18 | 25 | 75% |  |
+| 300 | [x] | SKALD: Against the Black Priory (STEAM) | 11 | 2026-11-09 | 25 | 96% |  |
+| 301 | [x] | Alan Wake's American Nightmare (EPIC) | 11 | 2026-11-09 | 24 | n/a |  |
+| 302 | [x] | HITMAN World of Assassination (STEAM) | 11 | 2026-11-09 | 24 | 76% |  |
+| 303 | [x] | Ready or Not (STEAM) | 11 | 2026-11-09 | 23 | 73% |  |
+| 304 | [x] | Lost Castle 2 (STEAM) | 11 | 2026-11-09 | 22 | 94% |  |
+| 305 | [x] | Baldur's Gate II: Enhanced Edition (STEAM) | 11 | 2026-11-18 | 21 | 75% |  |
+| 306 | [x] | Cruelty Squad (STEAM) | 11 | 2026-11-09 | 21 | 82% |  |
+| 307 | [x] | The Lord of the Rings: War in the North™ - Legacy Edition (STEAM) | 11 | 2026-11-09 | 21 | 94% |  |
+| 308 | [x] | Another World: 20th Anniversary Edition (GOG) | 11 | 2026-11-21 | 20 | 69% |  |
+| 309 | [x] | The Stanley Parable (STEAM) | 11 | 2026-11-13 | 20 | 75% |  |
+| 310 | [x] | F1 2015 (STEAM) | 10 | 2026-11-05 | 29 | 91% |  |
+| 311 | [x] | Intravenous 2 (STEAM) | 10 | 2026-11-09 | 26 | 95% |  |
+| 312 | [x] | RollerCoaster Tycoon® 3: Complete Edition (EPIC) | 10 | 2026-11-09 | 24 | 89% | [#409](https://github.com/GameNative/gamenative-compat/issues/409) |
+| 313 | [x] | Tiny Glade (STEAM) | 10 | 2026-11-09 | 23 | 53% |  |
+| 314 | [x] | FINAL FANTASY TYPE-0 HD (STEAM) | 10 | 2026-11-10 | 22 | 75% |  |
+| 315 | [x] | Intravenous (STEAM) | 10 | 2026-11-09 | 22 | 87% |  |
+| 316 | [x] | Beatblock (STEAM) | 10 | 2026-11-09 | 20 | 91% |  |
+| 317 | [x] | DiRT 4 (STEAM) | 10 | 2026-11-09 | 20 | 100% |  |
+| 318 | [x] | Haydee (STEAM) | 10 | 2026-11-09 | 20 | 83% |  |
+| 319 | [x] | Pillars of Eternity (STEAM) | 10 | 2026-11-21 | 20 | 100% |  |
+| 320 | [x] | Secret of Mana (STEAM) | 10 | 2026-11-18 | 20 | 70% |  |
+| 321 | [x] | Batman™: Arkham Origins (GOG) | 9 | 2026-11-09 | 22 | 88% |  |
+| 322 | [x] | Evoland (STEAM) | 9 | 2026-11-11 | 22 | n/a |  |
+| 323 | [x] | Guacamelee! Gold Edition (STEAM) | 9 | 2026-11-11 | 22 | 69% | [#322](https://github.com/GameNative/gamenative-compat/issues/322) |
+| 324 | [x] | Need for Speed: Undercover (STEAM) | 9 | 2026-11-11 | 22 | n/a | [#292](https://github.com/GameNative/gamenative-compat/issues/292) |
+| 325 | [x] | Call of Duty: Black Ops II - Multiplayer (STEAM) | 9 | 2026-11-17 | 20 | 33% |  |
+| 326 | [x] | Quake III Arena (STEAM) | 9 | 2026-11-03 | 20 | 27% |  |
+| 327 | [x] | UNDEFEATED (STEAM) | 9 | 2026-11-09 | 20 | 70% |  |
+| 328 | [x] | Ultrapool (STEAM) | 9 | 2026-11-09 | 20 | n/a |  |
+| 329 | [x] | Rayman Origins (GOG) | 8 | 2026-11-09 | 22 | 50% |  |
+| 330 | [x] | BIT.TRIP Presents... Runner2: Future Legend of Rhythm Alien (STEAM) | 8 | 2026-11-01 | 22 | n/a |  |
+| 331 | [x] | GRANDIA HD Remaster (STEAM) | 8 | 2026-11-09 | 22 | 93% |  |
+| 332 | [x] | Aperture Desk Job (STEAM) | 8 | 2026-11-03 | 21 | n/a |  |
+| 333 | [x] | Pocket Mirror ~ GoldenerTraum (STEAM) | 8 | 2026-11-09 | 20 | 71% |  |
+| 334 | [x] | Soul's Remnant (STEAM) | 8 | 2026-11-11 | 20 | n/a |  |
+| 335 | [x] | Lust Goddess (STEAM) | 7 | 2026-11-09 | 21 | 64% |  |
+| 336 | [x] | WORLD OF FINAL FANTASY (STEAM) | 7 | 2026-11-09 | 21 | 82% |  |
+| 337 | [x] | CULTIC (STEAM) | 7 | 2026-11-09 | 20 | 53% |  |
+| 338 | [x] | Legend of Grimrock 2 (STEAM) | 7 | 2026-11-09 | 20 | 92% | [#352](https://github.com/GameNative/gamenative-compat/issues/352) |
+| 339 | [x] | Crimzon Clover World EXplosion (STEAM) | 6 | 2026-11-09 | 23 | 86% |  |
+| 340 | [x] | Life is Strange Remastered (STEAM) | 5 | 2026-11-09 | 20 | 88% | [#436](https://github.com/GameNative/gamenative-compat/issues/436) |
